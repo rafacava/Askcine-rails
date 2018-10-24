@@ -1,2 +1,0 @@
-class FilmeController < ApplicationController
-end
