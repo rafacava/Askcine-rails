@@ -1,9 +1,8 @@
 <header>
    <%= render 'layouts/header-adm' %>
 </header>
-<p id="notice"><%= notice %></p>
+<p id="notice" class=""><%= notice %></p>
 <h1>Filmes</h1>
-
 <table>
   <thead>
     <tr>
@@ -39,3 +38,6 @@
 <br>
 
 <%= link_to 'New Filme', new_filme_path %>
+<footer>
+   <%= render 'layouts/footer' %>
+</footer>
