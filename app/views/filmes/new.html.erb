@@ -1,8 +1,15 @@
 <header>
    <%= render 'layouts/header-adm' %>
 </header>
+<div class="container">
 <h1>New Filme</h1>
 
 <%= render 'form', filme: @filme %>
+<br>
 
-<%= link_to 'Back', filmes_path %>
+<div class="actions waves-effect waves-light white-text black btn">
+    <i class="material-icons left">chevron_left</i>
+        <%= link_to 'Back', filmes_path %>
+</div>
+
+</div>
