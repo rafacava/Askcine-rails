@@ -25,7 +25,7 @@
         <td><%= filme.diretor %></td>
         <td><%= filme.categoria %></td>
         <td><%= filme.sinopse %></td>
-        <td><%= filme.imagem %></td>
+        <td><img src="<%= filme.imagem %>" alt="<%= filme.nome %>"</td>
         <td><%= link_to 'Ver', filme %></td>
         <td><%= link_to 'Editar', edit_filme_path(filme) %></td>
         <td><%= link_to 'Excluir', filme, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
