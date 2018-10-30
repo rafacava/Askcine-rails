@@ -1,5 +1,16 @@
-<h1>New Filme</h1>
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+<div class="container">
+<h1>Novo Filme</h1>
 
 <%= render 'form', filme: @filme %>
+<br>
 
-<%= link_to 'Voltar', filmes_path %>
+<div class="actions waves-effect waves-light white-text black btn">
+    <i class="material-icons left">chevron_left</i>
+        <%= link_to 'Voltar', filmes_path %>
+</div>
+
+</div>
+>>>>>>> 60fae08845b044acfa0b699860a1f3ea77368b88

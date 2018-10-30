@@ -1,0 +1,19 @@
+ <nav>
+    <div class="nav-wrapper black">
+      <a href="#!" class="brand-logo">Area Administrativa</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><%= link_to "Filmes",   filmes_path %></li>
+        <li><%= link_to "Cinemas",   filmes_path %></li>
+        <li><%= link_to "Cidades",   filmes_path %></li>
+        <li><%= link_to "Sessões",   filmes_path %></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav" id="mobile-demo">
+        <li><%= link_to "Filmes",   filmes_path %></li>
+        <li><%= link_to "Cinemas",   filmes_path %></li>
+        <li><%= link_to "Cidades",   filmes_path %></li>
+        <li><%= link_to "Sessões",   filmes_path %></li>
+  </ul>

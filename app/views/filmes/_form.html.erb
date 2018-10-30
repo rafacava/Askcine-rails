@@ -11,10 +11,6 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :cd_filme %>
-    <%= form.number_field :cd_filme %>
-  </div>
 
   <div class="field">
     <%= form.label :nome %>
@@ -46,7 +42,9 @@
     <%= form.text_field :imagem %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="actions waves-effect waves-light black btn">
+    <i class="material-icons left">check</i>
+    <%= form.submit :class => 'white-text' %>
   </div>
+  
 <% end %>

@@ -1,11 +1,12 @@
-<p id="notice"><%= notice %></p>
-
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+<p id="notice" class=""><%= notice %></p>
 <h1>Filmes</h1>
-
+<div class="container">
 <table>
   <thead>
     <tr>
-      <th>Cd filme</th>
       <th>Nome</th>
       <th>Ano</th>
       <th>Diretor</th>
@@ -19,7 +20,6 @@
   <tbody>
     <% @filmes.each do |filme| %>
       <tr>
-        <td><%= filme.cd_filme %></td>
         <td><%= filme.nome %></td>
         <td><%= filme.ano %></td>
         <td><%= filme.diretor %></td>
@@ -36,4 +36,12 @@
 
 <br>
 
+<<<<<<< HEAD
 <%= link_to 'Inserir filme', new_filme_path %>
+======
+<br><br><br><br><br><br>
+</div>
+<footer>
+   <%= render 'layouts/footer' %>
+</footer>
+>>>>>>> 60fae08845b044acfa0b699860a1f3ea77368b88
