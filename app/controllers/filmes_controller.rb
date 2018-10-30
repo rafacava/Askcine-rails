@@ -28,7 +28,7 @@ class FilmesController < ApplicationController
 
     respond_to do |format|
       if @filme.save
-        format.html { redirect_to @filme, notice: 'Filme was successfully created.' }
+        format.html { redirect_to @filme, notice: 'Filme inserido com sucesso.' }
         format.json { render :show, status: :created, location: @filme }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class FilmesController < ApplicationController
   def update
     respond_to do |format|
       if @filme.update(filme_params)
-        format.html { redirect_to @filme, notice: 'Filme was successfully updated.' }
+        format.html { redirect_to @filme, notice: 'Filme atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @filme }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class FilmesController < ApplicationController
   def destroy
     @filme.destroy
     respond_to do |format|
-      format.html { redirect_to filmes_url, notice: 'Filme was successfully destroyed.' }
+      format.html { redirect_to filmes_url, notice: 'Filme excluído com sucesso.' }
       format.json { head :no_content }
     end
   end

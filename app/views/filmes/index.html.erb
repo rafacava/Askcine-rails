@@ -26,9 +26,9 @@
         <td><%= filme.categoria %></td>
         <td><%= filme.sinopse %></td>
         <td><%= filme.imagem %></td>
-        <td><%= link_to 'Show', filme %></td>
-        <td><%= link_to 'Edit', edit_filme_path(filme) %></td>
-        <td><%= link_to 'Destroy', filme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', filme %></td>
+        <td><%= link_to 'Editar', edit_filme_path(filme) %></td>
+        <td><%= link_to 'Excluir', filme, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +36,4 @@
 
 <br>
 
-<%= link_to 'New Filme', new_filme_path %>
+<%= link_to 'Inserir filme', new_filme_path %>
