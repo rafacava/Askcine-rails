@@ -28,7 +28,7 @@
 
 <p>
   <strong>Imagem:</strong>
-  <%= @filme.imagem %>
+  <img src="<%= @filme.imagem %>" alt="<%= @filme.nome %>">
 </p>
 
 <%= link_to 'Editar', edit_filme_path(@filme) %> |

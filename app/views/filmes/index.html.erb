@@ -20,15 +20,15 @@
   <tbody>
     <% @filmes.each do |filme| %>
       <tr>
-        <td><%= filme.nome %></td>
-        <td><%= filme.ano %></td>
-        <td><%= filme.diretor %></td>
-        <td><%= filme.categoria %></td>
-        <td><%= filme.sinopse %></td>
-        <td><img src="<%= filme.imagem %>" alt="<%= filme.nome %>"</td>
-        <td><%= link_to 'Ver', filme %></td>
-        <td><%= link_to 'Editar', edit_filme_path(filme) %></td>
-        <td><%= link_to 'Excluir', filme, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+        <td class="estufado"><%= filme.nome %></td>
+        <td class="estufado"><%= filme.ano %></td>
+        <td class="estufado"><%= filme.diretor %></td>
+        <td class="estufado"><%= filme.categoria %></td>
+        <td class="sinopse"><%= filme.sinopse %></td>
+        <td class="estufado"><img src="<%= filme.imagem %>" alt="<%= filme.nome %>"></td>
+        <td class="estufado"><%= link_to 'Ver', filme %></td>
+        <td class="estufado"><%= link_to 'Editar', edit_filme_path(filme) %></td>
+        <td class="estufado"><%= link_to 'Excluir', filme, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
