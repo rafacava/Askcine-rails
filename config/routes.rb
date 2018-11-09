@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'busca/filmes'
+  get 'busca/cinema'
    get 'principal/index'
    
    resources :filmes
