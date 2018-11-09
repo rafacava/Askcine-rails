@@ -1,5 +1,5 @@
 class PrincipalController < ApplicationController
   def index
-    @filmes = Filme.all.limit(4)
+    @filmes = Filme.all.limit(4).order('created_at DESC')
   end
 end
