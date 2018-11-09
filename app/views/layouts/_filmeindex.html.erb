@@ -1,14 +1,16 @@
- 
+
+    <% @filmes.each do |filme| %> 
     <div class="col s12 m3 black-text">
       <div class="card">
         <div class="card-image">
-          <img class="objectImage" src="https://m.media-amazon.com/images/M/MV5BMjA0ODEzMTc1Nl5BMl5BanBnXkFtZTcwODM2MjAxNA@@._V1_UX182_CR0,0,182,268_AL_.jpg">
-          <span class="card-title">Card Title</span>
+          <img class="objectImage" src="<%= filme.imagem %>" alt="Poster do filme <%= filme.nome %>">
+          <span class="card-title"><%= filme.nome %></span>
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+          <p><%= filme.sinopse %></p>
         </div>
       </div>
      </div>
+     <% end %>
             
