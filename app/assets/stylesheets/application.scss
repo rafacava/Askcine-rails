@@ -25,3 +25,8 @@ body {
 .sinopse{
      padding-right: 7rem;   
 }
+.objectImage {
+    height: 170px;
+    object-fit: cover;
+    object-position: top;
+}
