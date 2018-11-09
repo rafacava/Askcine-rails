@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'busca/filmes'
+  get 'login' => "login#login", as: "login"
+  get 'busca/filmes' => 'busca/filmes', as: "buscafilmes"
   get 'busca/cinema'
-   get 'principal/index'
+  get 'principal/index'
    
    resources :filmes
  

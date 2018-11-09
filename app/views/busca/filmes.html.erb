@@ -1,2 +1,23 @@
-<h1>Busca#filmes</h1>
-<p>Find me in app/views/busca/filmes.html.erb</p>
+<div>
+    <div class="container center-align">
+    <h1>Busca por filmes</h1>
+        <div class="row">
+        <%= form_tag(buscafilmes_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+        <%= submit_tag "Search", :class => 'btn-large black' %>
+        <% end %>
+        </div>
+    </div>
+        <% if params[:busca].to_s.empty? %>
+            <% if @filmes.present? %>
+                <div class="row fundoindex center-align">
+                   <h2>Resultado da busca:</h2>
+                         <%= render 'layouts/filmeindex' %>
+                </div>
+            <% else %>
+              <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
+            <% end %>
+        <% else %>
+                <p></p>
+        <% end %>
+</div>
