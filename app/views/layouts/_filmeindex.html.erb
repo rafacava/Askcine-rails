@@ -5,12 +5,20 @@
         <div class="card-image">
           <img class="objectImage" src="<%= filme.imagem %>" alt="Poster do filme <%= filme.nome %>">
           <span class="card-title"><%= filme.nome %></span>
-          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">chevron_right</i></a>
-        </div>
+          
+          <%= link_to filme, :class => "btn-floating halfway-fab waves-effect waves-light red" do %>
+              <%= content_tag :i, "", :class => "material_icons icone" %>
+          <% end %>
+          </div>
         <div class="card-content">
           <p><%= filme.sinopse %></p>
         </div>
       </div>
      </div>
      <% end %>
-            
+
+<script>
+$(document).ready(function(){
+    $('.icone').html('play_arrow');
+});
+</script>            
