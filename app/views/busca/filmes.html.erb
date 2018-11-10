@@ -2,10 +2,11 @@
 <div>
     <div class="container center-align">
     <h1>Busca por filmes</h1>
+    <h3>Busque um filme por um nome no seu titulo</h3>
         <div class="row">
         <%= form_tag(buscafilmes_path, :method => "get", id: "search-form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
-        <%= submit_tag "Search", :class => 'btn-large black' %>
+        <%= submit_tag "Buscar filmes", :class => 'btn-large black' %>
         <% end %>
         </div>
     </div>
