@@ -9,17 +9,25 @@
         <% end %>
         </div>
     </div>
-        <% if params[:busca].to_s.empty? %>
             <% if @filmes.present? %>
                 <div class="row fundoindex center-align">
-                   <h2>Resultado da busca:</h2>
+                   <h2>Resultado     da busca: <%= params[:search] %></h2>
                          <%= render 'layouts/filmeindex' %>
                 </div>
-            <% else %>
-              <p>There are no posts containing the term(s) <%= params[:search] %>.</p>
-            <% end %>
-        <% else %>
-                <p></p>
-        <% end %>
-</div>
+                
    <%= render 'layouts/footer' %>
+            <% else %>
+             <div class="row fundoindex center-align">
+                   <h2>Resultado     da busca: <%= params[:search] %></h2>
+            <h4 id="toast">A expressão : <%= params[:search] %> não está em nenhum titulo de filme em nosso banco de dados</h4>
+           <script>
+               
+                $(document).ready(function(){
+                    M.toast({html: 'Filme não encontrado', classes:'large rounded'})
+                });
+           </script>       
+           </div>
+   <%= render 'layouts/footer' %>
+            <% end %>
+        
+</div>
