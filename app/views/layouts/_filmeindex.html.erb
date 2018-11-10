@@ -1,12 +1,12 @@
 
     <% @filmes.each do |filme| %> 
-    <div class="col s12 m3 black-text">
-      <div class="card">
+    <div class="col s2 m3 black-text">
+      <div class="card large">
         <div class="card-image">
-          <img class="objectImage" src="<%= filme.imagem %>" alt="Poster do filme <%= filme.nome %>">
+          <img src="<%= filme.imagem %>" alt="Poster do filme <%= filme.nome %>">
           <span class="card-title"><%= filme.nome %></span>
           
-          <%= link_to filme, :class => "btn-floating halfway-fab waves-effect waves-light red" do %>
+          <%= link_to filme, :class => "btn-floating halfway-fab waves-effect waves-light red frente" do %>
               <%= content_tag :i, "", :class => "material-icons icone" %>
           <% end %>
           </div>
