@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'login' => "login#login", as: "login"
   get 'busca/filmes' => 'busca/filmes', as: "buscafilmes"
   get 'busca/cinema'
