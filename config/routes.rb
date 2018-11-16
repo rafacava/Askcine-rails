@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'pages/home'
-  devise_for :users
+  #devise_for :users
   get 'login' => "login#login", as: "login"
   get 'busca/filmes' => 'busca/filmes', as: "buscafilmes"
   get 'busca/cinema'
