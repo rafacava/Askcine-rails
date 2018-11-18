@@ -7,6 +7,9 @@
         <li><%= link_to "Cinemas",   filmes_path %></li>
         <li><%= link_to "Cidades",   filmes_path %></li>
         <li><%= link_to "Sessões",   filmes_path %></li>
+        <li> 
+             <i class="material-icons medium dropdown-trigger" id="log" href="#!" data-target="dropdown1">person</i>
+        </li>
       </ul>
     </div>
   </nav>
@@ -16,4 +19,37 @@
         <li><%= link_to "Cinemas",   filmes_path %></li>
         <li><%= link_to "Cidades",   filmes_path %></li>
         <li><%= link_to "Sessões",   filmes_path %></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="dropdown2">Login</a></li>
   </ul>
+  
+    
+  <ul id="dropdown1" class="dropdown-content">
+  
+  <% if user_signed_in? %>  
+      <li><%= link_to current_user.username,   edit_user_registration_path %></li>
+      <li><%= link_to "Logout",   destroy_user_session_path, method: :delete %></li>
+      <% if current_user.admin %>
+          <li><%= link_to "Index",   root_path %></li>
+      <% end %>
+  <% else %>
+      <li><%= link_to "Registrar",   new_user_registration_path %></li>
+      <li><%= link_to "Logar",   new_user_session_path %></li>
+  <% end %> 
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  
+  <% if user_signed_in? %>  
+      <li><%= link_to current_user.email,   edit_user_registration_path %></li>
+      <li><%= link_to "Logout",   destroy_user_session_path, method: :delete %></li>
+  <% else %>
+      <li><%= link_to "Registrar",   new_user_registration_path %></li>
+      <li><%= link_to "Logar",   new_user_session_path %></li>
+  <% end %> 
+</ul>
+
+<script>
+    $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $(".dropdown-trigger").dropdown();
+  });
+</script>
