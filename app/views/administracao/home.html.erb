@@ -1,5 +1,7 @@
+<% if current_user && current_user.admin %>
+
 <header>
-   <%= render 'layouts/header' %>
+   <%= render 'layouts/header-adm' %>
 </header>
 
 <div class="row fundoindex center-align">
@@ -13,3 +15,9 @@
 </div>
 <br><br><br><br>
    <%= render 'layouts/footer' %>
+
+<% else %>
+<h1>ACESSO NÃO AUTORIZADO</h1>
+<% end %>
+
+
