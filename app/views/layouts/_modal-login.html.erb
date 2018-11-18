@@ -1,39 +1,15 @@
     
-
-<div class="col s12">
-	<h3 id="h3dologin">Você ainda não efetuou o login</h3>
-</div>
-<div class="col s12">
-	<a class="waves-effect waves-light white-text black btn-large modal-trigger" href="#modal1">
-		<i class="material-icons left">person</i>Logar
-	
-	</a>
-</div>
-<div id="modal1" class="modal">
-	<div class="modal-content blue-text text-darken-2">
-		<h4>Login</h4>
-		<div class="row">
-			<form class="col s12">
-				<div class="row">
-					<div class="input-field col s12">
-						<input placeholder="" id="first_name" type="text" class="validate">
-							<label for="first_name">Usuário</label>
-						</div>
-						<div class="input-field col s12">
-							<input id="password" type="password" class="validate">
-								<label for="password">Password</label>
-							</div>
-						</div>
-						<div class="modal-footer">
-							<a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
-						</div>
-					</form>
-				</div>
-			</div>
+  <% if user_signed_in? %>  
+      <h2>Bem vindo:<%= current_user.username %></h2>
+      <%= link_to "Sair do Askcine",  destroy_user_session_path, method: :delete, :class => "waves-effect waves-light white-text black btn-large" %>
+  <% else %>
+     <div class="col s12">
+		<h3 id="h3dologin">Você ainda não efetuou o login</h3>
+	 </div>
+	 <div class="col s12">
+	   	<%= link_to  new_user_session_path, :class => 'waves-effect waves-light white-text black btn-large' do %>
+  	      	<i class="material-icons left">person</i>Logar
+  		<% end %>
 		</div>
-		<script>
-         $(document).ready(function(){
-        $('.modal').modal();
-      });
+  <% end %> 
 
-    </script>
