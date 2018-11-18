@@ -1,6 +1,6 @@
     
   <% if user_signed_in? %>  
-      <h2>Bem vindo:<%= current_user.username %></h2>
+      <h2>Bem vindo: <%= current_user.username %></h2>
       <%= link_to "Sair do Askcine",  destroy_user_session_path, method: :delete, :class => "waves-effect waves-light white-text black btn-large" %>
   <% else %>
      <div class="col s12">
