@@ -1,6 +1,13 @@
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+
 <p id="notice"><%= notice %></p>
 
-
+<div class="filmes1">
+  
+   <h2>Visualizar Filme</h2> 
+   
 <p>
   <strong>Nome:</strong>
   <%= @filme.nome %>
@@ -33,3 +40,8 @@
 
 <%= link_to 'Editar', edit_filme_path(@filme) %> |
 <%= link_to 'Voltar', filmes_path %>
+</div>
+
+<footer>
+   <%= render 'layouts/footer' %>
+</footer>

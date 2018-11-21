@@ -1,6 +1,22 @@
-<h1>Editing Filme</h1>
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+
+<div class="filmes1">
+<h2>Editar Filme</h2>
+
+
 
 <%= render 'form', filme: @filme %>
+<br>
+<br>
+
 
 <%= link_to 'Ver', @filme %> |
 <%= link_to 'Voltar', filmes_path %>
+</div>
+
+<br>
+<br>
+
+  <%= render 'layouts/footer' %>

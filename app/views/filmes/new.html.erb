@@ -2,15 +2,19 @@
    <%= render 'layouts/header-adm' %>
 </header>
 <div class="container">
-<h1>Novo Filme</h1>
+<h2>Novo Filme</h2>
 
 <%= render 'form', filme: @filme %>
 <br>
 
-<div class="actions waves-effect waves-light white-text black btn">
+
     <i class="material-icons left">chevron_left</i>
 
         <%= link_to 'Voltar', filmes_path %>
 </div>
 
 </div>
+<br>
+<br>
+
+ <%= render 'layouts/footer' %>
