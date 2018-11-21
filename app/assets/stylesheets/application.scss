@@ -17,7 +17,7 @@ body {
     background-image: url('fundoindex.png');
     padding: 3rem;
     padding-top: 8rem;
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 .estufado{
     padding-right: 4rem;
@@ -37,5 +37,10 @@ body {
 #log{
     margin-right: 3rem;
     margin-left: 2rem;
+}
+
+nav .nav-wrapper {
+    position: relative;
+    height: 120%;
 }
 
