@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cidades
   get 'administracao/home'
   devise_for :users
   get 'login' => "login#login", as: "login"
