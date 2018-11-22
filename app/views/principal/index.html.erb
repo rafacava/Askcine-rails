@@ -2,18 +2,52 @@
    <%= render 'layouts/header' %>
 </header>
 
-<div class="row fundoindex center-align">
-      <div class="col s12"><h1>Bem vindo ao AskCine</h1></div>
-      <div> <%= render 'layouts/modal-login' %> </div>
-</div>
+<div class="slider fullscreen">
+    <ul class="slides">
 
-<div class="row container center-align">
-   <div class="col s12"><h2>Sobre o Projeto</h2>
+      <li>
+        <img src="http://ecine.net.br/sistema/arquivos/filmes/161020181735171.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://ecine.net.br/sistema/arquivos/filmes/151120181546391.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://ecine.net.br/sistema/arquivos/filmes/151120181543311.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="http://ecine.net.br/sistema/arquivos/filmes/231020181045152.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+
+
+<div class="row fundo1 center-align">
+   <div class="col s12"><h1>Sobre o Projeto</h1>
    <p class="flow-text">O projeto AskCine é um buscador de sessões de cinema, que também conta com informações sobre os filmes e os cinemas. Há duas ferramentas de pesquisa, uma pesquisa é destinada a mostrar todos os cinemas próximos ao usuário e outra é uma pesquisa onde o usuário direciona filtros destinados ao filme que ele deseja assistir. Este trabalho foi desenvolvido pelos alunos da Faculdade de Tecnologia da Baixada Santista - Rubens Lara inicialmente focado em cinemas da baixada santista. </p>
    </div>
 </div>
 <div class="row fundoindex center-align">
-   <h2>Lançamentos</h2>
+   <h1>Lançamentos</h1>
+   <br>
+   <br>
+   <br>
          <%= render 'layouts/filmebusca' %>
    
 </div>
