@@ -1,15 +1,15 @@
 
     <% @filmes.each do |filme| %> 
   <div class="col s2 m3 container">
-  <div class="card large">
-    <div class="card-image waves-effect waves-block waves-light">
+  <div class="card medium responsive-img">
+    <div class="card-image waves-effect waves-block waves-light responsive-img">
       <img class="activator"  src="<%= filme.imagem %>" alt="Poster do filme <%= filme.nome %>">>
     </div>
-    <div class="card-content">
+    <div class="card-content responsive-img">
       <span class="card-title activator grey-text text-darken-4"><%= filme.nome %><i class="material-icons right">more_vert</i></span>
       <p><%= link_to 'Ver Filme', filme %></p>
     </div>
-    <div class="card-reveal">
+    <div class="card-reveal responsive-img">
       <span class="card-title grey-text text-darken-4"><%= filme.nome %><i class="material-icons right">close</i></span>
       <p class="black-text"><%= filme.sinopse %></p>
     </div>

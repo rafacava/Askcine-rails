@@ -93,8 +93,12 @@ h2 {
     margin-top: 500px;
     width: 100%;
     padding: 5rem;
+    background-image: url('fondu2.jpg');
+    //background-image: linear-gradient(to top left, gray 10%, white 50%);
+}
 
-    background-image: linear-gradient(to top left, gray 10%, white 50%);
+.fundo1 img {
+    opacity : 0.5;
 }
 
 .slider.fullscreen {
@@ -110,6 +114,14 @@ h2 {
 .menu {
     color: #42a5f5;
 }
+
+.fundo2 {
+    margin-top: 15px;
+    width: 100%;
+    padding: 5rem;
+    background-image: url('fondu2.jpg');
+}
+    
 
 
 

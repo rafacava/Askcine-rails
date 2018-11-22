@@ -2,12 +2,12 @@
    <%= render 'layouts/header' %>
 </header>    
      
-      <div class="col s12 center"><h2>Registre-se</h2></div>
+      <div class="col s12 center fundo1"><h2>Registre-se</h2></div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
- <div class="row container center-align">
+ <div class="row center-align">
    <div class="col s12">
   <div class="field">
     <%= f.label :email %><br />
