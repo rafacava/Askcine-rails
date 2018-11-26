@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cinemas
   resources :cidades
   get 'administracao/home'
   devise_for :users

@@ -1,0 +1,57 @@
+<%= form_with(model: cinema, local: true) do |form| %>
+  <% if cinema.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cinema.errors.count, "error") %> prohibited this cinema from being saved:</h2>
+
+      <ul>
+      <% cinema.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :endereco %>
+    <%= form.text_field :endereco %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imagem %>
+    <%= form.text_field :imagem %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fachada %>
+    <%= form.text_field :fachada %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :long %>
+    <%= form.text_field :long %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cidades_id %>
+    <%= form.text_field :cidades_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
