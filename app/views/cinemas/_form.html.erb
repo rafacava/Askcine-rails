@@ -43,7 +43,7 @@
 
   <div class="field">
     <%= form.label :cidades_id %>
-    <%= form.text_field :cidades_id %>
+    <%= collection_select(:cinema, :cidades_id, Cidade.all.order(:nome), :id, :nome) %>
   </div>
 
   <div class="field">
@@ -54,4 +54,10 @@
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+  <script>
+    $(document).ready(function(){
+    $('select').formSelect();
+  });
+
+  </script>
+    <% end %>

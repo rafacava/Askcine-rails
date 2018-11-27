@@ -1,3 +1,3 @@
 class Cinema < ApplicationRecord
-  belongs_to :cidades
+  belongs_to :cidade
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_26_221501) do
+ActiveRecord::Schema.define(version: 2018_11_27_115706) do
 
   create_table "cidades", force: :cascade do |t|
     t.string "nome"
@@ -42,6 +42,17 @@ ActiveRecord::Schema.define(version: 2018_11_26_221501) do
     t.string "imagem"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sessos", force: :cascade do |t|
+    t.date "dia"
+    t.time "horario"
+    t.integer "cinema_id"
+    t.integer "filme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["cinema_id"], name: "index_sessos_on_cinema_id"
+    t.index ["filme_id"], name: "index_sessos_on_filme_id"
   end
 
   create_table "users", force: :cascade do |t|

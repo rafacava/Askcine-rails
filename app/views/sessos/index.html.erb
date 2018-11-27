@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sessos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dia</th>
+      <th>Horario</th>
+      <th>Cinema</th>
+      <th>Filme</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessos.each do |sesso| %>
+      <tr>
+        <td><%= sesso.dia %></td>
+        <td><%= sesso.horario %></td>
+        <td><%= sesso.cinema %></td>
+        <td><%= sesso.filme %></td>
+        <td><%= link_to 'Show', sesso %></td>
+        <td><%= link_to 'Edit', edit_sesso_path(sesso) %></td>
+        <td><%= link_to 'Destroy', sesso, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sesso', new_sesso_path %>
