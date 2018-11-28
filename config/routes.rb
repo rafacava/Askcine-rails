@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :sessos
   resources :cinemas
   resources :cidades
   get 'administracao/home'

@@ -69,6 +69,6 @@ class CinemasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cinema_params
-      params.require(:cinema).permit(:nome, :endereco, :imagem, :fachada, :lat, :long, :cidades_id, :descricao)
+      params.require(:cinema).permit(:nome, :endereco, :imagem, :fachada, :lat, :long, :cidade_id)
     end
 end

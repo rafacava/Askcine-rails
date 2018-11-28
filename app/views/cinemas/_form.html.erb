@@ -35,29 +35,27 @@
     <%= form.label :lat %>
     <%= form.text_field :lat %>
   </div>
+  
 
   <div class="field">
     <%= form.label :long %>
     <%= form.text_field :long %>
   </div>
 
-  <div class="field">
+<div class="field">
     <%= form.label :cidades_id %>
-    <%= collection_select(:cinema, :cidades_id, Cidade.all.order(:nome), :id, :nome) %>
+    <%= collection_select(:cinema, :cidade_id, Cidade.all.order(:nome), :id, :nome) %>
   </div>
 
-  <div class="field">
-    <%= form.label :descricao %>
-    <%= form.text_area :descricao %>
-  </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+  
   <script>
-    $(document).ready(function(){
+  $(document).ready(function(){
     $('select').formSelect();
   });
+</script>
 
-  </script>
-    <% end %>
+<% end %>

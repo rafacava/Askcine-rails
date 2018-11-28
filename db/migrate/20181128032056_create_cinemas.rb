@@ -8,7 +8,6 @@ class CreateCinemas < ActiveRecord::Migration[5.2]
       t.string :lat
       t.string :long
       t.references :cidade, foreign_key: true
-      t.text :descricao
 
       t.timestamps
     end

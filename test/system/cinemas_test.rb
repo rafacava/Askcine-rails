@@ -14,8 +14,7 @@ class CinemasTest < ApplicationSystemTestCase
     visit cinemas_url
     click_on "New Cinema"
 
-    fill_in "Cidades", with: @cinema.cidades_id
-    fill_in "Descricao", with: @cinema.descricao
+    fill_in "Cidade", with: @cinema.cidade_id
     fill_in "Endereco", with: @cinema.endereco
     fill_in "Fachada", with: @cinema.fachada
     fill_in "Imagem", with: @cinema.imagem
@@ -32,8 +31,7 @@ class CinemasTest < ApplicationSystemTestCase
     visit cinemas_url
     click_on "Edit", match: :first
 
-    fill_in "Cidades", with: @cinema.cidades_id
-    fill_in "Descricao", with: @cinema.descricao
+    fill_in "Cidade", with: @cinema.cidade_id
     fill_in "Endereco", with: @cinema.endereco
     fill_in "Fachada", with: @cinema.fachada
     fill_in "Imagem", with: @cinema.imagem

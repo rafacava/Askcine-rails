@@ -7,8 +7,7 @@ one:
   fachada: MyString
   lat: MyString
   long: MyString
-  cidades: one
-  descricao: MyText
+  cidade: one
 
 two:
   nome: MyString
@@ -17,5 +16,4 @@ two:
   fachada: MyString
   lat: MyString
   long: MyString
-  cidades: two
-  descricao: MyText
+  cidade: two

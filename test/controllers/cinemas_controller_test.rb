@@ -17,7 +17,7 @@ class CinemasControllerTest < ActionDispatch::IntegrationTest
 
   test "should create cinema" do
     assert_difference('Cinema.count') do
-      post cinemas_url, params: { cinema: { cidades_id: @cinema.cidades_id, descricao: @cinema.descricao, endereco: @cinema.endereco, fachada: @cinema.fachada, imagem: @cinema.imagem, lat: @cinema.lat, long: @cinema.long, nome: @cinema.nome } }
+      post cinemas_url, params: { cinema: { cidade_id: @cinema.cidade_id, endereco: @cinema.endereco, fachada: @cinema.fachada, imagem: @cinema.imagem, lat: @cinema.lat, long: @cinema.long, nome: @cinema.nome } }
     end
 
     assert_redirected_to cinema_url(Cinema.last)
@@ -34,7 +34,7 @@ class CinemasControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update cinema" do
-    patch cinema_url(@cinema), params: { cinema: { cidades_id: @cinema.cidades_id, descricao: @cinema.descricao, endereco: @cinema.endereco, fachada: @cinema.fachada, imagem: @cinema.imagem, lat: @cinema.lat, long: @cinema.long, nome: @cinema.nome } }
+    patch cinema_url(@cinema), params: { cinema: { cidade_id: @cinema.cidade_id, endereco: @cinema.endereco, fachada: @cinema.fachada, imagem: @cinema.imagem, lat: @cinema.lat, long: @cinema.long, nome: @cinema.nome } }
     assert_redirected_to cinema_url(@cinema)
   end
 

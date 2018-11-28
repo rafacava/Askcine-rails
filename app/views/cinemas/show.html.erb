@@ -31,13 +31,8 @@
 </p>
 
 <p>
-  <strong>Cidades:</strong>
-  <%= @cinema.cidades %>
-</p>
-
-<p>
-  <strong>Descricao:</strong>
-  <%= @cinema.descricao %>
+  <strong>Cidade:</strong>
+  <%= @cinema.cidade.nome %>
 </p>
 
 <%= link_to 'Edit', edit_cinema_path(@cinema) %> |
