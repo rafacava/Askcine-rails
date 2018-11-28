@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dia:</strong>
+  <%= @sessao.dia %>
+</p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @sessao.horario %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @sessao.status %>
+</p>
+
+<p>
+  <strong>Cinema:</strong>
+  <%= @sessao.cinema %>
+</p>
+
+<p>
+  <strong>Filme:</strong>
+  <%= @sessao.filme %>
+</p>
+
+<%= link_to 'Edit', edit_sessao_path(@sessao) %> |
+<%= link_to 'Back', sessaos_path %>

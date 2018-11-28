@@ -1,0 +1,50 @@
+<%= form_with(model: sessao, local: true) do |form| %>
+  <% if sessao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sessao.errors.count, "error") %> prohibited this sessao from being saved:</h2>
+
+      <ul>
+      <% sessao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dia %>
+    <%= form.date_select :dia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horario %>
+    <%= form.time_select :horario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.check_box :status %>
+  </div>
+
+
+<div class="field">
+    <%= form.label :cinemas_id %>
+    <%= collection_select(:sessao, :cinema_id, Cinema.all.order(:nome), :id, :nome) %>
+  </div>
+  
+<div class="field">
+    <%= form.label :filmes_id %>
+    <%= collection_select(:sessao, :filme_id, Filme.all.order(:nome), :id, :nome) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+  
+  <script>
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
+
+<% end %>

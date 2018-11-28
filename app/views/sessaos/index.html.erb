@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sessaos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dia</th>
+      <th>Horario</th>
+      <th>Status</th>
+      <th>Cinema</th>
+      <th>Filme</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessaos.each do |sessao| %>
+      <tr>
+        <td><%= sessao.dia %></td>
+        <td><%= sessao.horario %></td>
+        <td><%= sessao.status %></td>
+        <td><%= sessao.cinema %></td>
+        <td><%= sessao.filme %></td>
+        <td><%= link_to 'Show', sessao %></td>
+        <td><%= link_to 'Edit', edit_sessao_path(sessao) %></td>
+        <td><%= link_to 'Destroy', sessao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sessao', new_sessao_path %>
