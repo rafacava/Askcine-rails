@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :destaques
   resources :postagems
   resources :sessaos
   resources :cinemas

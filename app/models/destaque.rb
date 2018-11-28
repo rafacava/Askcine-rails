@@ -1,0 +1,2 @@
+class Destaque < ApplicationRecord
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: destaque, local: true) do |form| %>
+  <% if destaque.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(destaque.errors.count, "error") %> prohibited this destaque from being saved:</h2>
+
+      <ul>
+      <% destaque.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :titulo %>
+    <%= form.text_field :titulo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imagem %>
+    <%= form.text_field :imagem %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

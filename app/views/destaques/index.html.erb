@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Destaques</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Imagem</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destaques.each do |destaque| %>
+      <tr>
+        <td><%= destaque.titulo %></td>
+        <td><%= destaque.imagem %></td>
+        <td><%= link_to 'Show', destaque %></td>
+        <td><%= link_to 'Edit', edit_destaque_path(destaque) %></td>
+        <td><%= link_to 'Destroy', destaque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destaque', new_destaque_path %>

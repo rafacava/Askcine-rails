@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @destaque.titulo %>
+</p>
+
+<p>
+  <strong>Imagem:</strong>
+  <%= @destaque.imagem %>
+</p>
+
+<%= link_to 'Edit', edit_destaque_path(@destaque) %> |
+<%= link_to 'Back', destaques_path %>
