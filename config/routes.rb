@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :noticia
   resources :sessaos
   resources :cinemas
   resources :cidades

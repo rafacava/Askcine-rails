@@ -2,14 +2,14 @@
 
 one:
   dia: 2018-11-28
-  horario: 2018-11-28 04:10:16
+  horario: 2018-11-28 06:19:29
   status: false
   cinema: one
   filme: one
 
 two:
   dia: 2018-11-28
-  horario: 2018-11-28 04:10:16
+  horario: 2018-11-28 06:19:29
   status: false
   cinema: two
   filme: two
