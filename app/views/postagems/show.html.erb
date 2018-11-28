@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @postagem.titulo %>
+</p>
+
+<p>
+  <strong>Conteudo:</strong>
+  <%= @postagem.conteudo %>
+</p>
+
+<p>
+  <strong>Imagem:</strong>
+  <%= @postagem.imagem %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @postagem.user.username %>
+</p>
+
+<%= link_to 'Edit', edit_postagem_path(@postagem) %> |
+<%= link_to 'Back', postagems_path %>
