@@ -27,7 +27,7 @@
 
 <p>
   <strong>Long:</strong>
-  <%= @cinema.long %>
+  <span id='longo'><%= @cinema.long %></span>
 </p>
 
 <p>
@@ -36,15 +36,17 @@
 </p>
 <br>
 <br>
-<div id="map" data-latitude="<%= cinema.lat %>" data-longitude="<%= cin].long %>">
+<div id="map" data-latitude="<%= @cinema.lat %>" data-longitude="<%= @cinema.long %>">
   <!-- The Map gets drawn here! -->
 </div>
     <script>
       var map;
+      var longitude = <%= j @cinema.long %>;
+      var latitude = <%= j @cinema.lat %>;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -34.397, lng: 150.644},
-          zoom: 8
+          center: {lat: latitude, lng:longitude},
+          zoom: 18
         });
       }
     </script>
