@@ -28,15 +28,23 @@
 
   <div class="field">
     <%= form.label :cinema_id %>
-    <%= form.text_field :cinema_id %>
+    <%= collection_select(:sessao, :cinema_id, Cinema.all.order(:nome), :id, :nome) %>
   </div>
+  
 
   <div class="field">
     <%= form.label :filme_id %>
-    <%= form.text_field :filme_id %>
+ <%= collection_select(:sessao, :filme_id, Filme.all.order(:nome), :id, :nome) %>
   </div>
+  
 
   <div class="actions">
     <%= form.submit %>
   </div>
+  
+    <script>
+  $(document).ready(function(){
+    $('select').formSelect();
+  });
+</script>
 <% end %>
