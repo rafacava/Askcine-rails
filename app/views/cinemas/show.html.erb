@@ -46,7 +46,6 @@
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
       function initMap() {
-      
       var map, infoWindow;
       var myLatlng = new google.maps.LatLng(<%= j @cinema.lat %>, <%= j @cinema.long %>);
         map = new google.maps.Map(document.getElementById('map'), {
@@ -56,7 +55,7 @@
       var marker = new google.maps.Marker({
           position: myLatlng,
           map: map,
-          title: 'Hello World!'
+          title: '<%= j @cinema.nome %>'
         });
         
         infoWindow = new google.maps.InfoWindow;
