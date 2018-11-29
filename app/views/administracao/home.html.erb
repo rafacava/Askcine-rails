@@ -5,12 +5,32 @@
 </header>
 
 <div class="row fundoindex center-align">
-      <div class="col s12"><h1>Bem vindo ao AskCine - Administrador</h1></div>
+      <div class="col s12"><h1></h1></div>
+      
+      
       <div> <%= render 'layouts/modal-login' %> </div>
 </div>
 
 <div class="row fundoindex center-align">
-   <h2>Fazer Painel</h2>
+   <h2>Painel</h2>
+   
+   
+   <%= link_to "Ver filmes",   filmes_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
+   <%= link_to "Inserir filme",   filmesnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> | 
+   
+   
+   <%= link_to "Ver cinemas",   cinemas_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
+   <%= link_to "Inserir cinemas",   cinemasnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> |
+   
+   <%= link_to "Ver cidades",   cidades_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
+   <%= link_to "Inserir cidades",   cidadesnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> |
+   
+   <%= link_to "Ver sessões",   sessaos_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
+   <%= link_to "Inserir sessão",   sessaosnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> |
+   
+   
+   
+   
    
 </div>
 <br><br><br><br>

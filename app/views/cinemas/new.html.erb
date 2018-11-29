@@ -1,5 +1,24 @@
-<h1>New Cinema</h1>
+<% if current_user && current_user.admin %>
+
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+<div class="container">
+<h2>Inserir Cinema</h2>
 
 <%= render 'form', cinema: @cinema %>
 
-<%= link_to 'Back', cinemas_path %>
+    <i class="material-icons left">chevron_left</i>
+
+        <%= link_to 'Voltar', filmes_path %>
+<br><br><br><br>
+
+
+
+
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
+
+</div>
+   <%= render 'layouts/footer' %>

@@ -2,7 +2,7 @@
 <div>
     <div class="container center-align">
     <h1>Busca por filmes</h1>
-    <h3>Busque um filme por um nome no seu titulo</h3>
+    <h3>Busque um filme por um nome no seu título</h3>
         <div class="row">
         <%= form_tag(buscafilmes_path, :method => "get", id: "search-form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
@@ -19,7 +19,7 @@
             <% else %>
              <div class="row fundoindex center-align">
                    <h2>Resultado     da busca: <%= params[:search] %></h2>
-            <h4 id="toast">A expressão : <%= params[:search] %> não está em nenhum titulo de filme em nosso banco de dados</h4>
+            <h4 id="toast">A expressão : <%= params[:search] %> não está em nenhum título de filme em nosso banco de dados</h4>
            <script>
                
                 $(document).ready(function(){
@@ -28,5 +28,5 @@
            </script>       
            </div>
             <% end %>
-   <%= render 'layouts/footer' %>
+  
 </div>

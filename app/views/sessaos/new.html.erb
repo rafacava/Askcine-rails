@@ -1,5 +1,14 @@
-<h1>New Sessao</h1>
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+<div class="container">
+<h1>Inserir Sessão</h1>
 
 <%= render 'form', sessao: @sessao %>
 
-<%= link_to 'Back', sessaos_path %>
+    <i class="material-icons left">chevron_left</i>
+
+        <%= link_to 'Voltar', filmes_path %>
+ 
+ </div>
+ <%= render 'layouts/footer' %>

@@ -3,16 +3,19 @@
 <header>
    <%= render 'layouts/header-adm' %>
 </header>
-<h1>New Cidade</h1>
+<div class="container">
+<h2>Inserir Cidade</h2>
 
 <%= render 'form', cidade: @cidade %>
 
-<%= link_to 'Back', cidades_path %>
+    <i class="material-icons left">chevron_left</i>
+
+        <%= link_to 'Voltar', filmes_path %>
 <br><br><br><br>
 
-
-   <%= render 'layouts/footer' %>
 
 <% else %>
    <%= render 'layouts/valida' %>
 <% end %>
+</div>
+ <%= render 'layouts/footer' %>

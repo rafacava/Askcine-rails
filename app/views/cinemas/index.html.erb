@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% if current_user && current_user.admin %>
+
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
 
 <h1>Cinemas</h1>
 
@@ -37,3 +41,11 @@
 <br>
 
 <%= link_to 'New Cinema', new_cinema_path %>
+<br><br><br><br>
+
+
+   <%= render 'layouts/footer' %>
+
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

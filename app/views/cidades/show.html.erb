@@ -1,8 +1,8 @@
-<% if current_user && current_user.admin %>
-
 <header>
-   <%= render 'layouts/header-adm' %>
+   <%= render 'layouts/header' %>
 </header>
+<diV class="container">
+    <br><br><br><br><br>
   <strong>Nome:</strong>
   <%= @cidade.nome %>
 </p>
@@ -10,10 +10,6 @@
 <%= link_to 'Edit', edit_cidade_path(@cidade) %> |
 <%= link_to 'Back', cidades_path %>
 <br><br><br><br>
-
+</diV>
 
    <%= render 'layouts/footer' %>
-
-<% else %>
-   <%= render 'layouts/valida' %>
-<% end %>
