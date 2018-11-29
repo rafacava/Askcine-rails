@@ -1,17 +1,19 @@
 <header>
-   <%= render 'layouts/header-adm' %>
+   <%= render 'layouts/header' %>
 </header>
 
 <p id="notice"><%= notice %></p>
 
 <div class="filmes1">
-  
-   <h2>Visualizar Filme</h2> 
+
    
-<p>
-  <strong>Nome:</strong>
-  <%= @filme.nome %>
-</p>
+
+   <h2> <%= @filme.nome %> </h2>
+  <table>
+  <tr>
+  <td>
+
+
 
 <p>
   <strong>Ano:</strong>
@@ -19,7 +21,7 @@
 </p>
 
 <p>
-  <strong>Diretor:</strong>
+  <strong>Direção:</strong>
   <%= @filme.diretor %>
 </p>
 
@@ -32,13 +34,14 @@
   <strong>Sinopse:</strong>
   <%= @filme.sinopse %>
 </p>
-
+</td>
 <p>
-  <strong>Imagem:</strong>
-  <img src="<%= @filme.imagem %>" alt="<%= @filme.nome %>">
+<td>
+  <img src="<%= @filme.imagem %>" alt="<%= @filme.nome %> height="50" width="300">
 </p>
+</td>
 
-<%= link_to 'Editar', edit_filme_path(@filme) %> |
+</table>
 <%= link_to 'Voltar', filmes_path %>
 </div>
 

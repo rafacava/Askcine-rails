@@ -4,9 +4,9 @@
    <%= render 'layouts/header-adm' %>
 </header>
 
-<h1>Cinemas</h1>
-
-<table>
+<h2>Cinemas</h2>
+<div class="container">
+<table class="highlight">
   <thead>
     <tr>
       <th>Nome</th>
@@ -40,12 +40,13 @@
 
 <br>
 
-<%= link_to 'New Cinema', new_cinema_path %>
+<%= link_to 'Inserir Cinema', new_cinema_path %>
 <br><br><br><br>
 
 
+</div>
    <%= render 'layouts/footer' %>
-
 <% else %>
    <%= render 'layouts/valida' %>
 <% end %>
+

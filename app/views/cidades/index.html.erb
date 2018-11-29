@@ -4,9 +4,9 @@
    <%= render 'layouts/header-adm' %>
 </header>
 
-<h1>Cidades</h1>
-
-<table>
+<h2>Cidades</h2>
+<div class="container">
+<table class="highlight">
   <thead>
     <tr>
       <th>Nome</th>
@@ -28,13 +28,14 @@
 
 <br>
 
-<%= link_to 'New Cidade', new_cidade_path %>
+<%= link_to 'Inserir Cidade', new_cidade_path %>
 
 <br><br><br><br>
 
 
-   <%= render 'layouts/footer' %>
+ </div>
+<%= render 'layouts/footer' %>
 
 <% else %>
    <%= render 'layouts/valida' %>
-<% end %>
+<% end %>  

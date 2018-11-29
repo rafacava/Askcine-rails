@@ -1,7 +1,10 @@
+<% if current_user && current_user.admin %>
 <header>
    <%= render 'layouts/header-adm' %>
 </header>
+
 <p id="notice" class=""><%= notice %></p>
+
 <h2>Filmes</h2>
 <div class="container">
 <table class="highlight">
@@ -41,6 +44,7 @@
 
 <br><br><br><br><br><br>
 </div>
-<footer>
    <%= render 'layouts/footer' %>
-</footer>
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

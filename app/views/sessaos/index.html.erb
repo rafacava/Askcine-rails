@@ -1,8 +1,14 @@
+<% if current_user && current_user.admin %>
+
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Sessaos</h1>
-
-<table>
+<h2>Sessões</h2>
+<div class="container">
+<table class="highlight">
   <thead>
     <tr>
       <th>Dia</th>
@@ -22,9 +28,9 @@
         <td><%= sessao.status %></td>
         <td><%= sessao.cinema %></td>
         <td><%= sessao.filme %></td>
-        <td><%= link_to 'Show', sessao %></td>
-        <td><%= link_to 'Edit', edit_sessao_path(sessao) %></td>
-        <td><%= link_to 'Destroy', sessao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', sessao %></td>
+        <td><%= link_to 'Editar', edit_sessao_path(sessao) %></td>
+        <td><%= link_to 'Excluir', sessao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +38,12 @@
 
 <br>
 
-<%= link_to 'New Sessao', new_sessao_path %>
+<%= link_to 'Inserir Sessão', new_sessao_path %>
+
+<br><br><br><br><br><br>
+</div>
+
+   <%= render 'layouts/footer' %>
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
