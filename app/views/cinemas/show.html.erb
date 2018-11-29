@@ -34,6 +34,22 @@
   <strong>Cidade:</strong>
   <%= @cinema.cidade.nome %>
 </p>
+<br>
+<br>
+<div id="map" data-latitude="<%= cinema.lat %>" data-longitude="<%= cin].long %>">
+  <!-- The Map gets drawn here! -->
+</div>
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYHyky7nsgHEKTFx7gmuFaR9kbtgtVgWI&callback=initMap"
+    async defer></script>
 
 <%= link_to 'Edit', edit_cinema_path(@cinema) %> |
 <%= link_to 'Back', cinemas_path %>
