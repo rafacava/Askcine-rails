@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   resources :sessaos
   resources :cinemas
   resources :cidades
+    resources :filmes
+    
   get 'administracao/home'
   devise_for :users
   get 'login' => "login#login", as: "login"
+  
   get 'busca/filmes' => 'busca/filmes', as: "buscafilmes"
   get 'busca/cinema' => 'busca/cinema', as: "buscacinema"
   
@@ -14,10 +17,11 @@ Rails.application.routes.draw do
   get 'cinemas/new' => 'cinemas/new', as: "cinemasnew"
   get 'cidades/new' => 'cidades/new', as: "cidadesnew"
   get 'sessaos/new' => 'sessaos/new', as: "sessaosnew"
+
   
   get 'principal/index'
    
-   resources :filmes
+ 
  
   get 'filmes/index'
   get 'cinemas/index'

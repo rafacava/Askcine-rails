@@ -10,9 +10,11 @@
         <% end %>
         </div>
     </div>
+    <br>
+    <br>
             <% if @filmes.present? %>
                 <div class="row fundoindex center-align">
-                   <h2>Resultado     da busca: <%= params[:search] %></h2>
+                   <h2>Resultado da busca: <%= params[:search] %></h2>
                          <%= render 'layouts/filmebusca' %>
                 </div>
                 
