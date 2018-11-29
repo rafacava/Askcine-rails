@@ -2,6 +2,19 @@
    <%= render 'layouts/header' %>
 </header>
 
+<div class="slider fullscreen" id="aft">
+    <ul class="slides">
+            <% @destaques.each do |destaque| %> 
+                <li>
+                    <img src="<%= destaque.imagem %>"> <!-- random image -->
+                    <div class="caption center-align">
+                        <h3><%= destaque.titulo %></h3>
+                    </div>
+                </li>
+      
+            <% end %>
+    </ul>
+  </div>
   
 
 

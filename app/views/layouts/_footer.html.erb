@@ -7,9 +7,9 @@
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Buscar file</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Busca cinema</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Lançamentos</a></li>
+                  <li><%= link_to "Buscar Filmes",   buscafilmes_path, :class => 'grey-text text-lighten-3' %></li>
+                  <li><%= link_to "Buscar Cinemas",   buscacinema_path, :class => 'grey-text text-lighten-3' %></li>
+                  <li><%= link_to "Em cartaz",   lancamentos_path, :class => 'grey-text text-lighten-3' %></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Contato</a></li>
                 </ul>
               </div>
@@ -21,3 +21,4 @@
             </div>
           </div>
         </footer>
+        
