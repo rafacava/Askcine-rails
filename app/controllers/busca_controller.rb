@@ -3,6 +3,7 @@ class BuscaController < ApplicationController
      @filmes = Filme.search(params[:search]).order("created_at DESC")
   end
 
-  def cinema
+  def cinemas
+    @cinemas = Cinema.search(params[:search]).order("created_at DESC")
   end
 end

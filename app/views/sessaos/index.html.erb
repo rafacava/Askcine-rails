@@ -26,8 +26,8 @@
         <td><%= sessao.dia %></td>
         <td><%= sessao.horario %></td>
         <td><%= sessao.status %></td>
-        <td><%= sessao.cinema %></td>
-        <td><%= sessao.filme %></td>
+        <td><%= sessao.cinema.nome %></td>
+        <td><%= sessao.filme.nome %></td>
         <td><%= link_to 'Ver', sessao %></td>
         <td><%= link_to 'Editar', edit_sessao_path(sessao) %></td>
         <td><%= link_to 'Excluir', sessao, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>

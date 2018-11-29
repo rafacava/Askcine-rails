@@ -17,12 +17,12 @@
 
 <p>
   <strong>Cinema:</strong>
-  <%= @sessao.cinema %>
+  <%= @sessao.cinema.nome %>
 </p>
 
 <p>
   <strong>Filme:</strong>
-  <%= @sessao.filme %>
+  <%= @sessao.filme.nome %>
 </p>
 
 <%= link_to 'Edit', edit_sessao_path(@sessao) %> |

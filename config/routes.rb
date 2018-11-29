@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'login' => "login#login", as: "login"
   get 'busca/filmes' => 'busca/filmes', as: "buscafilmes"
   get 'busca/cinema' => 'busca/cinema', as: "buscacinema"
+  
   get 'filmes/new' => 'filmes/new', as: "filmesnew"
   get 'cinemas/new' => 'cinemas/new', as: "cinemasnew"
   get 'cidades/new' => 'cidades/new', as: "cidadesnew"

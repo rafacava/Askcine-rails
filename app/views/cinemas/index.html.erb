@@ -29,7 +29,7 @@
         <td><%= cinema.fachada %></td>
         <td><%= cinema.lat %></td>
         <td><%= cinema.long %></td>
-        <td><%= cinema.cidade %></td>
+        <td><%= cinema.cidade.nome %></td>
         <td><%= link_to 'Show', cinema %></td>
         <td><%= link_to 'Edit', edit_cinema_path(cinema) %></td>
         <td><%= link_to 'Destroy', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -1,2 +1,32 @@
-<h1>Busca#cinema</h1>
-<p>Find me in app/views/busca/cinema.html.erb</p>
+<%= render 'layouts/header' %>
+<div>
+    <div class="container center-align">
+    <h1>Busca por cinemas</h1>
+    <h3>Busque o nome do cinema</h3>
+        <div class="row">
+        <%= form_tag(buscacinema_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+        <%= submit_tag "Buscar cinemas", :class => 'btn-large black' %>
+        <% end %>
+        </div>
+    </div>
+            <% if @cinemas.present? %>
+                <div class="row fundoindex center-align">
+                   <h2>Resultado     da busca: <%= params[:search] %></h2>
+                         <%= render 'layouts/cinemabusca' %>
+                </div>
+                
+            <% else %>
+             <div class="row fundoindex center-align">
+                   <h2>Resultado     da busca: <%= params[:search] %></h2>
+            <h4 id="toast">A expressão : <%= params[:search] %> Não existe nenhum cinema com os parametros de busca</h4>
+           <script>
+               
+                $(document).ready(function(){
+                    M.toast({html: 'Cinema não encontrado', classes:'large rounded'})
+                });
+           </script>       
+           </div>
+            <% end %>
+  
+</div>

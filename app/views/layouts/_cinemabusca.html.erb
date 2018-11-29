@@ -1,0 +1,14 @@
+    <% @cinemas.each do |cinema| %> 
+    
+    <div class="col s2 m3 container">
+       <%= cinema.nome %>
+       <p><%= link_to 'Ver Cinema', cinema %></p>
+         </div>
+         
+     <% end %>    
+     
+<script>
+$(document).ready(function(){
+    $('.icone').html('play_arrow');
+});
+</script>       
