@@ -41,12 +41,11 @@
 </div>
     <script>
       var map;
-      var longitude = <%= j @cinema.long %>;
-      var latitude = <%= j @cinema.lat %>;
       function initMap() {
+        var myLatLng = {lat: <%= j @cinema.lat %>, lng: <%= j @cinema.long %>};
         map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: latitude, lng:longitude},
-          zoom: 18
+          center: myLatLng,
+          zoom: 19
         });
       }
     </script>
