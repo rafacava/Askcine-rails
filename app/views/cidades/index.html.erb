@@ -1,4 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% if current_user && current_user.admin %>
+
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
 
 <h1>Cidades</h1>
 
@@ -25,3 +29,12 @@
 <br>
 
 <%= link_to 'New Cidade', new_cidade_path %>
+
+<br><br><br><br>
+
+
+   <%= render 'layouts/footer' %>
+
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

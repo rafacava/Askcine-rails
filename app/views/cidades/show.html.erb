@@ -1,9 +1,19 @@
-<p id="notice"><%= notice %></p>
+<% if current_user && current_user.admin %>
 
-<p>
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
   <strong>Nome:</strong>
   <%= @cidade.nome %>
 </p>
 
 <%= link_to 'Edit', edit_cidade_path(@cidade) %> |
 <%= link_to 'Back', cidades_path %>
+<br><br><br><br>
+
+
+   <%= render 'layouts/footer' %>
+
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
