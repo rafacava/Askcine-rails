@@ -2,7 +2,7 @@
 <div>
     <div class="container center-align">
     <h1>Busca por cinemas</h1>
-    <h3>Busque o nome do cinema</h3>
+    <h3>Busque um cinema por um nome no seu título</h3>
         <div class="row">
         <%= form_tag(buscacinema_path, :method => "get", id: "search-form") do %>
         <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
@@ -10,16 +10,18 @@
         <% end %>
         </div>
     </div>
+    <br>
+    <br>
             <% if @cinemas.present? %>
                 <div class="row fundoindex center-align">
-                   <h2>Resultado     da busca: <%= params[:search] %></h2>
+                   <h2>Resultado da busca: <%= params[:search] %></h2>
                          <%= render 'layouts/cinemabusca' %>
                 </div>
                 
             <% else %>
              <div class="row fundoindex center-align">
                    <h2>Resultado     da busca: <%= params[:search] %></h2>
-            <h4 id="toast">A expressão : <%= params[:search] %> Não existe nenhum cinema com os parametros de busca</h4>
+            <h4 id="toast">A expressão : <%= params[:search] %> não está em nenhum título de cinema em nosso banco de dados</h4>
            <script>
                
                 $(document).ready(function(){
