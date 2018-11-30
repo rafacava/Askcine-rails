@@ -71,4 +71,6 @@ class CinemasController < ApplicationController
     def cinema_params
       params.require(:cinema).permit(:nome, :endereco, :imagem, :fachada, :lat, :long, :cidade_id)
     end
+    
+    
 end
