@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get 'filmes/index'
   get 'cinemas/index'
   get 'cidades/index'
-  get 'sessaos/index'
+  get 'sessaos/index'=> 'sessaos/index', as: "sessaosindex"
   
   root 'principal#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

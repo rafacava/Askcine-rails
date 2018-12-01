@@ -1,5 +1,6 @@
 
     <% @filmes.each do |filme| %> 
+ 
     
   <div class="col s2 m3 container">
   <div class="card medium responsive-img">
@@ -10,7 +11,11 @@
     <div class="card-content responsive-img">
       <span class="card-title activator grey-text text-darken-4"><%= filme.nome %><i class="material-icons right">more_vert</i></span>
       <p><%= link_to 'Ver Filme', filme %></p>
-   
+      <%= link_to 'Ver sessões', sessaos_path(params[:id]) %>
+      
+     <!--   <p><%= link_to 'Show', sessaos_path %></p> -->
+  
+  
     </div>
     <div class="card-reveal responsive-img">
       <span class="card-title grey-text text-darken-4"><%= filme.nome %><i class="material-icons right">close</i></span>
