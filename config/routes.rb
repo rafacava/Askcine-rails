@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get 'cinemas/new' => 'cinemas/new', as: "cinemasnew"
   get 'cidades/new' => 'cidades/new', as: "cidadesnew"
   get 'sessaos/new' => 'sessaos/new', as: "sessaosnew"
+  get 'destaques/new' => 'destaques/new', as: "destaquesnew"
+  get 'postagems/new' => 'postagems/new', as: "postagemsnew"
 
   
   get 'principal/index'
@@ -28,6 +30,8 @@ Rails.application.routes.draw do
   get 'cinemas/index'
   get 'cidades/index'
   get 'sessaos/index'=> 'sessaos/index', as: "sessaosindex"
+  get 'destaques/index'
+  get 'postagems/index'
   
   root 'principal#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

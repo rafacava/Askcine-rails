@@ -5,40 +5,76 @@
 </header>
 
 <div class="row fundoindex center-align">
-      <div class="col s12"><h1></h1></div>
+      <div class="col s12">
       
       
       <div> <%= render 'layouts/modal-login' %> </div>
-</div>
 
-<div class="row fundoindex center-align">
-   <br><br>
+
+   <br>
    <h2>Painel administrativo</h2>
+   <br>
+   <br>
+
    
-   
+    <div class="col s4 left-align">
+     <h3>Filmes</h3>
+     <br>
    <%= link_to "Ver filmes",   filmes_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
-   <%= link_to "Inserir filme",   filmesnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> | 
    
+   <%= link_to "Inserir filme",   filmesnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> 
    
-   <%= link_to "Ver cinemas",   cinemas_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
-   <%= link_to "Inserir cinemas",   cinemasnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> |
+     </div>
    
+    
+    <div class="col s4 left-align">
+       <h3>Cinema</h3>
+     <br>
+   <%= link_to "Ver cinemas",   cinemas_path, :class => 'waves-effect waves-light grey darken-4 btn' %> 
+ 
+   <%= link_to "Inserir cinemas",   cinemasnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
+   </div> 
+   
+       <div class="col s4 left-align">
+       <h3>Cidade</h3>
+     <br>
    <%= link_to "Ver cidades",   cidades_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
-   <%= link_to "Inserir cidades",   cidadesnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> |
    
+   <%= link_to "Inserir cidades",   cidadesnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> 
+   </div>
+   
+     <div class="col s4 left-align">
+     <h3>Sessão</h3>
+     <br>
+      
    <%= link_to "Ver sessões",   sessaos_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
-   <%= link_to "Inserir sessão",   sessaosnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> |
+   <%= link_to "Inserir sessão",   sessaosnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> 
+    </div>
+    
+       <div class="col s4 left-align">
+     <h3>Destaques</h3>
+     <br>
+   <%= link_to "Ver destaques",   destaques_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
+   <%= link_to "Inserir destaques",   destaquesnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> 
+    </div>
+    
+       <div class="col s4 left-align">
+     <h3>Notícias</h3>
+     <br>
+      <%= link_to "Ver notícias",   postagems_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
+   <%= link_to "Inserir notícias",   postagemsnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> 
+    </div> 
    
-   
-   
-   
-<br><br><br><br><br><br><br><br>
+
 </div>
 
-   <%= render 'layouts/footer' %>
 
+ </div>
+<br><br><br><br>
+    
+ 
 <% else %>
    <%= render 'layouts/valida' %>
 <% end %>
-
-
+</div>
+  <%= render 'layouts/footer' %>
