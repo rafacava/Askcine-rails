@@ -1,0 +1,16 @@
+   <% @postagems.each do |postagem| %>
+
+
+
+<h1>Postagems</h1>
+
+  
+  
+  
+  <%= postagem.titulo %>
+  <%= postagem.conteudo %>
+  <img src="<%= postagem.imagem %>" alt="Poster de noticia" width="200">
+
+  
+  
+ <% end %>

@@ -1,3 +1,9 @@
+<% if current_user && current_user.admin %>
+
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+
 <p id="notice"><%= notice %></p>
 
 <h1>Postagems</h1>
@@ -18,7 +24,7 @@
       <tr>
         <td><%= postagem.titulo %></td>
         <td><%= postagem.conteudo %></td>
-        <td><%= postagem.imagem %></td>
+        <td><img src="<%= postagem.imagem %>" alt="Poster de noticia" width="200"></td>
         <td><%= postagem.user %></td>
         <td><%= link_to 'Show', postagem %></td>
         <td><%= link_to 'Edit', edit_postagem_path(postagem) %></td>
@@ -31,3 +37,10 @@
 <br>
 
 <%= link_to 'New Postagem', new_postagem_path %>
+
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
+
+</div>
+   <%= render 'layouts/footer' %>
