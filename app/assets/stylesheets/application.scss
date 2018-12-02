@@ -13,14 +13,14 @@ body {
 }
 
 .fundoindex {
-    background-color: gray;
-    padding: 2rem;
+    background-color: black;
+    padding-top: -50rem;
     color: white;
-    margin-bottom: -100px;
-    margin-top: -20px;
-    
-   
-}
+    margin-bottom: -10px;
+    margin-top: -10px;
+ }
+ 
+ 
 .estufado {
     padding-right: 4rem;
     
@@ -90,7 +90,8 @@ h2 {
 }
 
 .fundo1 {
-    margin-top: 500px;
+    margin-top: 10px;
+    margin-bottom: -90px;
     width: 100%;
     padding: 5rem;
     background-image: url('fondu2.jpg');
@@ -123,10 +124,6 @@ h2 {
 }
  
 
-#posslider{
-    margin-top: 45rem;
-}
-
 .logo{
     width:120px;
     height:80px;
@@ -137,3 +134,24 @@ h2 {
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
       #map { height: 100% }
+      
+      
+      .card img {
+    height: 263px;
+    width: 100%;
+    
+}
+
+.card {
+    margin-top: 580px;
+    padding: 0px;
+    margin-left: 5px;
+    margin-bottom: 0px;
+  }
+  
+  .card1 {
+    margin-top: 50px;
+    padding: 0px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+  }

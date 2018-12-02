@@ -1,6 +1,8 @@
 <header>
    <%= render 'layouts/header' %>
 </header>
+      <div class="row">
+        <div class="col s12">
 
 <div class="slider fullscreen" id="aft">
     <ul class="slides">
@@ -15,21 +17,77 @@
             <% end %>
     </ul>
   </div>
-  
+  </div>
+            
+            
+ <!--Card-->
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image responsive-img">
+              <img src="https://gritasaopaulo.com.br/wp-content/uploads/2018/10/DpEKZBrU0AAGs1H.jpg">
+              <span class="card-title red accent-4">Filmes em cartaz</span>
+            </div>
+            <div class="card-content">
+              <p>Clique e veja todos os filmes que estão em cartaz. </p>
+            </div>
+            <div class="card-action">
+              <%= link_to "Veja mais",   lancamentos_path%>
+            </div>
+          </div>
+        </div>
+                   <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image responsive-img">
+              <img src="https://mudeiderumo.com/wp-content/uploads/2017/08/saibamais.png">
+              <span class="card-title red accent-4">Sobre o projeto</span>
+            </div>
+            <div class="card-content">
+              <p>Clique e saiba mais sobre o projeto Askcine </p>
+            </div>
+            <div class="card-action">
+              <%= link_to "Veja mais",   lancamentos_path%>
+            </div>
+          </div>
+        </div>
+           <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image responsive-img">
+              <img src="http://br.web.img3.acsta.net/c_400_200/newsv7/18/11/28/17/37/3255383.jpg">
+              <span class="card-title red accent-4">Notícias</span>
+            </div>
+            <div class="card-content">
+              <p>Veja todas as notícias sobre filmes.</p>
+            </div>
+            <div class="card-action">
+              <a href="<?= base_url(); ?>dicas">Veja nossas notícias</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-
-<div class="row fundo1 center-align" id="posslider">
-   <div class="col s12"><h2>Sobre o Projeto</h2>
-   <p class="flow-text">O projeto AskCine é um buscador de sessões de cinema, que também conta com informações sobre os filmes e os cinemas. Há duas ferramentas de pesquisa, uma pesquisa é destinada a mostrar todos os cinemas próximos ao usuário e outra é uma pesquisa onde o usuário direciona filtros destinados ao filme que ele deseja assistir. Este trabalho foi desenvolvido pelos alunos da Faculdade de Tecnologia da Baixada Santista - Rubens Lara inicialmente focado em cinemas da baixada santista. </p>
-   </div>
 </div>
+</div>
+</div>
+
+
+
 <div class="row fundoindex center-align">
+    <div class="col s12 white-text">
+    
    <h2>Lançamentos</h2>
-   <br>
-   <br>
-   <br>
+
          <%= render 'layouts/filmebusca' %>
-   
+         
+</div>
+</div>
+  <div class="row fundo1 center-align">
+   <div class="col s12"><h2>Últimas notícias</h2>
+   <p class="flow-text">Lorem ipsum dolor sit amet, per ornatus feugait deleniti
+   in, per equidem nusquam signiferumque ut. Omnium eligendi eam in, alii oratio
+   abhorreant sed ei. No sed tantas homero, invenire intellegam reprehendunt an 
+   est. Nobis molestie usu et, nec eu scripserit liberavisse. </p>
+   </div>
+</div> 
 </div>
 <br><br><br><br>
    <%= render 'layouts/footer' %>
