@@ -38,12 +38,20 @@
 </p>
 <br>
 <br>
-<%= render 'layouts/map' %>
 
-<%= link_to 'Edit', edit_cinema_path(@cinema) %> |
-<%= link_to 'Back', cinemas_path %>
+
+<%= link_to 'Voltar', cinemas_path %> |
+
+<% if current_user && current_user.admin %>
+<%= link_to 'Editar', edit_cinema_path(@cinema) %>
+
+<% else %>
+   <%= render 'layouts/valida0' %>
+<% end %>
+
+<%= render 'layouts/map' %> 
+
 <br><br><br><br>
-
 
    <%= render 'layouts/footer' %>
 

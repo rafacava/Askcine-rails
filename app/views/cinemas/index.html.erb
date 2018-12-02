@@ -30,9 +30,9 @@
         <td><%= cinema.lat %></td>
         <td><%= cinema.long %></td>
         <td><%= cinema.cidade.nome %></td>
-        <td><%= link_to 'Show', cinema %></td>
-        <td><%= link_to 'Edit', edit_cinema_path(cinema) %></td>
-        <td><%= link_to 'Destroy', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', cinema %></td>
+        <td><%= link_to 'Editar', edit_cinema_path(cinema) %></td>
+        <td><%= link_to 'Excluir', cinema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

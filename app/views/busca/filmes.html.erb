@@ -1,12 +1,12 @@
 <%= render 'layouts/header' %>
-<div>
+     <div class="fundobusca">
     <div class="container center-align">
     <h2>Busca por filmes</h2>
     <h4>Busque um filme pelo seu título ou palavra-chave.</h4>
     <br><br><br>
     <div class="row">
         <%= form_tag(buscafilmes_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search], placeholder: "Search Posts" %>
+        <%= text_field_tag :search, params[:search], placeholder: "digite aqui" %>
         <br><br><br>
         <%= submit_tag "Buscar filmes", :class => 'btn-large black' %>
         <% end %>

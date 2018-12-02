@@ -1,3 +1,4 @@
+   <%= render 'layouts/header' %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -9,6 +10,11 @@
   <strong>Imagem:</strong>
   <%= @destaque.imagem %>
 </p>
+<%= link_to 'Voltar', destaques_path %> |
+<% if current_user && current_user.admin %>
+<%= link_to 'Editar', edit_destaque_path(@destaque) %>
 
-<%= link_to 'Edit', edit_destaque_path(@destaque) %> |
-<%= link_to 'Back', destaques_path %>
+   <% else %>
+   <%= render 'layouts/valida0' %>
+<% end %>
+   <%= render 'layouts/footer' %>

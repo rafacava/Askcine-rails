@@ -4,7 +4,7 @@
    <%= render 'layouts/header-adm' %>
 </header>
 
-<div class="row fundoindex center-align">
+<div class="row fundoadm center-align">
       <div class="col s12">
       
       
@@ -16,7 +16,7 @@
    <br>
    <br>
 
-   
+   <div class="col s12">
     <div class="col s4 left-align">
      <h3>Filmes</h3>
      <br>
@@ -63,18 +63,16 @@
      <br>
       <%= link_to "Ver notícias",   postagems_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
    <%= link_to "Inserir notícias",   postagemsnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> 
-    </div> 
-   
-
-</div>
-
-
- </div>
-<br><br><br><br>
+  
+<br><br><br><br><br><br><br>
     
  
 <% else %>
    <%= render 'layouts/valida' %>
 <% end %>
+</div>
+    </div> 
+    </div>
+ </div>
 </div>
   <%= render 'layouts/footer' %>

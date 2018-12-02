@@ -1,6 +1,13 @@
+<% if current_user && current_user.admin %>
+
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+
+<div class="container">
 <p id="notice"><%= notice %></p>
 
-<h1>Destaques</h1>
+<h2>Destaques</h2>
 
 <table>
   <thead>
@@ -16,9 +23,9 @@
       <tr>
         <td><%= destaque.titulo %></td>
         <td><%= destaque.imagem %></td>
-        <td><%= link_to 'Show', destaque %></td>
-        <td><%= link_to 'Edit', edit_destaque_path(destaque) %></td>
-        <td><%= link_to 'Destroy', destaque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', destaque %></td>
+        <td><%= link_to 'Editar', edit_destaque_path(destaque) %></td>
+        <td><%= link_to 'Excluir', destaque, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +33,9 @@
 
 <br>
 
-<%= link_to 'New Destaque', new_destaque_path %>
+<%= link_to 'Inserir Destaque', new_destaque_path %>
+</div>
+   <%= render 'layouts/footer' %>
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

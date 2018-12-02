@@ -1,6 +1,16 @@
+<% if current_user && current_user.admin %>
+
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
 <h1>Editing Destaque</h1>
 
 <%= render 'form', destaque: @destaque %>
 
-<%= link_to 'Show', @destaque %> |
-<%= link_to 'Back', destaques_path %>
+<%= link_to 'Ver', @destaque %> |
+<%= link_to 'Voltar', destaques_path %>
+
+   <%= render 'layouts/footer' %>
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

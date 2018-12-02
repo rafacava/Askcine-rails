@@ -1,14 +1,18 @@
 <header>
    <%= render 'layouts/header' %>
 </header>
-<diV class="container">
+<div class="container">
     <br><br><br><br><br>
   <strong>Nome:</strong>
   <%= @cidade.nome %>
 </p>
+<%= link_to 'Voltar', cidades_path %> |
+<% if current_user && current_user.admin %>
 
-<%= link_to 'Edit', edit_cidade_path(@cidade) %> |
-<%= link_to 'Back', cidades_path %>
+<%= link_to 'Editar', edit_cidade_path(@cidade) %> 
+<% else %>
+   <%= render 'layouts/valida0' %>
+<% end %>
 <br><br><br><br>
 </diV>
 
