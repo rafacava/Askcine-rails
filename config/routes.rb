@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'contato/index'
   get 'sobre/index'
   get 'lancamentos/index'
   resources :destaques
@@ -24,8 +25,9 @@ Rails.application.routes.draw do
 
   
   get 'principal/index'
+  
    get 'sobre/index'=> 'sobre/index', as: "sobre"
-   
+   get 'contato/index'=> 'contato/index', as: "contato"
  get 'lancamentos/index' => 'lancamentos/index', as: "lancamentos"
  
   get 'filmes/index'
