@@ -1,11 +1,11 @@
-<% if current_user && current_user.admin %>
+
 <header>
-   <%= render 'layouts/header-adm' %>
+   <%= render 'layouts/header' %>
 </header>
 
 <p id="notice" class=""><%= notice %></p>
 
-<h2>Filmes</h2>
+<h2>Sessões</h2>
 <div class="container">
     
    <%= render 'layouts/sessaofilme' %>
@@ -13,11 +13,8 @@
 <br>
 
 
-<%= link_to 'Inserir filme', new_filme_path %>
+        <%= link_to 'Voltar', lancamentos_path %>
 
 <br><br><br><br><br><br>
 </div>
    <%= render 'layouts/footer' %>
-<% else %>
-   <%= render 'layouts/valida' %>
-<% end %>

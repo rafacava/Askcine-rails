@@ -33,7 +33,7 @@ Rails.application.routes.draw do
    get 'sobre/index'=> 'sobre/index', as: "sobre"
    get 'contato/index'=> 'contato/index', as: "contato"
  get 'lancamentos/index' => 'lancamentos/index', as: "lancamentos"
- get 'lancamentos/noshow' => 'lancamentos/noshow', as: "shownoticias"
+ get 'lancamentos/noti' => 'lancamentos/noti', as: "shownoticias"
  
   get 'filmes/index'
   get 'cinemas/index'

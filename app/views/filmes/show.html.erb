@@ -7,16 +7,16 @@
 <div class="filmes1">
 
    
-
-   <h2> <%= @filme.nome %> </h2>
-  <table>
-  <tr>
-  <td>
-
-
-
-<p>
-  <strong>Ano:</strong>
+   
+    <div class="col s12 m7">
+    <h2 class="header"><%= @filme.nome %></h2>
+    <div class="card horizontal">
+      <div class="card-image">
+         <img src="<%= @filme.imagem %>" alt="<%= @filme.nome %>">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+      <strong>Ano:</strong>
   <%= @filme.ano %>
 </p>
 
@@ -34,15 +34,21 @@
   <strong>Sinopse:</strong>
   <%= @filme.sinopse %>
 </p>
-</td>
-<p>
-<td>
-  <img src="<%= @filme.imagem %>" alt="<%= @filme.nome %> height="50" width="300">
-</p>
-</td>
 
-</table>
-<%= link_to 'Voltar', filmes_path %>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+          
+   
+   
+   
+   
+   
+ 
+<%= link_to 'Voltar', lancamentos_path %>
 </div>
 
 <footer>
