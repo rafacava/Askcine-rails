@@ -1,0 +1,37 @@
+<% if current_user && current_user.admin %>
+<header>
+   <%= render 'layouts/header-adm' %>
+</header>
+
+<p id="notice" class=""><%= notice %></p>
+
+<h2>Filmes</h2>
+<div class="container">
+<table class="highlight">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessaos.each do |sessao| %>
+      <tr>
+        <td class="estufado"><%= sessao.cinema.nome %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'Inserir filme', new_filme_path %>
+
+<br><br><br><br><br><br>
+</div>
+   <%= render 'layouts/footer' %>
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
