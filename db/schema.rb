@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_28_063738) do
+ActiveRecord::Schema.define(version: 2018_12_03_193418) do
 
   create_table "cidades", force: :cascade do |t|
     t.string "nome"
@@ -29,6 +29,17 @@ ActiveRecord::Schema.define(version: 2018_11_28_063738) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["cidade_id"], name: "index_cinemas_on_cidade_id"
+  end
+
+  create_table "comentafilmes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "filme_id"
+    t.string "titulo"
+    t.text "comentario"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["filme_id"], name: "index_comentafilmes_on_filme_id"
+    t.index ["user_id"], name: "index_comentafilmes_on_user_id"
   end
 
   create_table "destaques", force: :cascade do |t|

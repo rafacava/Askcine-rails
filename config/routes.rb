@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comentafilmes
   get 'buscar/cinemas'
   get 'buscar/filme'
   get 'sessoes/filme'

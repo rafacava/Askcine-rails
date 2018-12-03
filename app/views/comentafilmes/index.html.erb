@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comentafilmes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Filme</th>
+      <th>Titulo</th>
+      <th>Comentario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comentafilmes.each do |comentafilme| %>
+      <tr>
+        <td><%= comentafilme.user %></td>
+        <td><%= comentafilme.filme %></td>
+        <td><%= comentafilme.titulo %></td>
+        <td><%= comentafilme.comentario %></td>
+        <td><%= link_to 'Show', comentafilme %></td>
+        <td><%= link_to 'Edit', edit_comentafilme_path(comentafilme) %></td>
+        <td><%= link_to 'Destroy', comentafilme, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Comentafilme', new_comentafilme_path %>

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @comentafilme.user %>
+</p>
+
+<p>
+  <strong>Filme:</strong>
+  <%= @comentafilme.filme %>
+</p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @comentafilme.titulo %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @comentafilme.comentario %>
+</p>
+
+<%= link_to 'Edit', edit_comentafilme_path(@comentafilme) %> |
+<%= link_to 'Back', comentafilmes_path %>

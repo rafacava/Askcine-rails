@@ -1,6 +1,5 @@
 class BuscarController < ApplicationController
   def cinemas
-    
     @cinemas = Cinema.all
     if params[:search]
       @cinemas = Cinema.search(params[:search])
