@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'buscar/cinemas'
+  get 'buscar/filme'
   get 'sessoes/filme'
   get 'sessoes/cinema'
   get 'contato/index'
