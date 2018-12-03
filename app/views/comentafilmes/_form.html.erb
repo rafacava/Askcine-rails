@@ -11,6 +11,12 @@
     </div>
   <% end %>
 
+
+<div class="field">
+    <%= form.label :filme_id %>
+    <%= collection_select(:comentafilme, :filme_id, Filme.all.order(:nome), :id, :nome) %>
+</div>
+  
   <div class="field">
     <%= form.label :titulo %>
     <%= form.text_field :titulo %>
@@ -25,3 +31,10 @@
     <%= form.submit %>
   </div>
 <% end %>
+<script>
+  
+    $(document).ready(function(){
+    $('select').formSelect();
+  });
+  
+</script>

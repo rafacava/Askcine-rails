@@ -1,9 +1,13 @@
 <div class="carousel carousel-slider center">
     
     <% @postagems.each do |postagem| %> 
-    <div class="carousel-item white black-text" href="#one!">
+    
+    <div class="fundoc carousel-item black-text" href="#one!">
+      
+    
+     
       <h3><%= postagem.titulo %></h3>
-      <h4>Feito por:<%= postagem.user.username %></h4>
+      <p>Feito por:<%= postagem.user.username %></p>
       
       <p class="black-text texto-noticia"><%= postagem.conteudo %></p>
     </div>

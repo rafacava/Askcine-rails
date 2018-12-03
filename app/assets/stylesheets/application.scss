@@ -100,8 +100,9 @@ h2 {
     margin-top: 10px;
     margin-bottom: -20px;
     width: 100%;
-    padding: 5rem;
-    background-image: url('fondu2.jpg');
+    padding: 0rem 0rem 0rem 0rem;
+    background-color: white;
+    //background-image: url('fondu2.jpg');
     //background-image: linear-gradient(to top left, gray 10%, white 50%);
 }
 
@@ -189,4 +190,9 @@ height: 250px;
     margin:5rem;
     margin-right:10rem;
     margin-left:10rem;
+    
+}
+
+.fundoc{
+background-image: url('fondu2.jpg');
 }

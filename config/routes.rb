@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   resources :comentafilmes
+  get 'mostra/filme'
+  get 'mostra/cinema'
   get 'buscar/cinemas'
   get 'buscar/filme'
   get 'sessoes/filme'
@@ -34,7 +36,7 @@ Rails.application.routes.draw do
    get 'sobre/index'=> 'sobre/index', as: "sobre"
    get 'contato/index'=> 'contato/index', as: "contato"
  get 'lancamentos/index' => 'lancamentos/index', as: "lancamentos"
- get 'lancamentos/noti' => 'lancamentos/noti', as: "shownoticias"
+
  
   get 'filmes/index'
   get 'cinemas/index'
