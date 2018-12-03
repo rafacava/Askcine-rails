@@ -1,2 +1,20 @@
-<h1>Sessoes#cinema</h1>
-<p>Find me in app/views/sessoes/cinema.html.erb</p>
+
+<header>
+   <%= render 'layouts/header' %>
+</header>
+
+<p id="notice" class=""><%= notice %></p>
+
+<h2>Sessões</h2>
+<div class="container">
+    
+   <%= render 'layouts/sessaofilme' %>
+
+<br>
+
+
+        <%= link_to 'Voltar', lancamentos_path %>
+
+<br><br><br><br><br><br>
+</div>
+   <%= render 'layouts/footer' %>

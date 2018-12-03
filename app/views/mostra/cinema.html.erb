@@ -1,2 +1,47 @@
-<h1>Mostra#cinema</h1>
-<p>Find me in app/views/mostra/cinema.html.erb</p>
+<%= render 'layouts/header' %>
+   <% @cinemas.each do |cinema| %>
+<div class="container align-center">  
+  <div class="row">
+   <div class="col s12 black-text"><h2><%= cinema.nome %></h2></div>   
+  </div>
+  
+  <div class="row">
+      <div class="col s6">
+          <ul>
+              <li>
+                      <strong>Cinema:</strong>
+                      <%= cinema.nome %>
+              </li>
+              <li>
+                      <strong>Endereço:</strong>
+                      <%= cinema.endereco %>
+              </li>
+              <li>
+                      <strong>Imagem:</strong>
+                <img class="center-align"  src="<%= cinema.imagem %>" alt="Imagem do cinema <%= cinema.nome %>">
+              </li>
+              <li>
+                      <strong>Fachada:</strong>
+                     <img class="center-align"  src="<%= cinema.fachada %>" alt="Fachada do cinema <%= cinema.nome %>">
+                      
+              </li>
+            <li>
+                      <strong>Latitude:</strong>
+                      <%= cinema.lat %>
+              </li>
+            <li>
+                      <strong>Longitude:</strong>
+                      <%= cinema.long %>
+              </li>
+              <li>
+                    <p><%= link_to 'Ver Sessões nesse cinema', sessoes_cinema_path(:id => cinema) %></p>
+                      
+              </li>
+          </ul>
+     </div>
+  </div>
+</div>
+
+
+          
+    <% end %>

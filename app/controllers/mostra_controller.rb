@@ -6,5 +6,9 @@ class MostraController < ApplicationController
   end
 
   def cinema
+    @cinemas = Cinema.where("id = ?", params[:id])
+   
   end
 end
+
+

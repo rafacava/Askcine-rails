@@ -1,4 +1,6 @@
   <% @cinemas.each do |cinema| %>
+  
         <p><%= cinema.nome %></p>
+   <p><%= link_to 'Ver Cinema', mostra_cinema_path(:id => cinema) %></p>
       
   <% end %>
