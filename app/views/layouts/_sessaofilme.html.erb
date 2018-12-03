@@ -1,0 +1,33 @@
+
+    <% @sessaos.each do |sessao| %> 
+ 
+    
+  <div class="col s2 m2 container">
+  <div class="card1 card small ">
+    
+    
+    <div class="card-image waves-effect waves-block waves-light responsive-img">
+      <img class="activator"  src="<%= sessao.filme.imagem %>" alt="Poster do filme <%= sessao.filme.nome %>">>
+    </div>
+    
+    <div class="card-content ">
+      <span class="card-title activator grey-text text-darken-4"><%= sessao.filme.nome %><i class="material-icons right">more_vert</i></span>
+  
+  
+    </div>
+    <div class="card-reveal ">
+      <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+      <p class="black-text"><%= sessao.dia %></p>
+      <p class="black-text"><%= sessao.horario %></p>
+      <p class="black-text"><%= sessao.status %></p>
+    </div>
+  </div>
+  </div>
+          
+    <% end %>
+
+<script>
+$(document).ready(function(){
+    $('.icone').html('play_arrow');
+});
+</script>            
