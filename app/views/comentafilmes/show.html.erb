@@ -29,5 +29,9 @@
 
 
 <% else %>
-   <%= render 'layouts/valida' %>
+   <%= render 'layouts/header' %>
+   <h1>Comentario Feito com sucesso!!</h1>
+<p><%= link_to 'Volta', mostra_filme_path(:id => @comentafilme.filme) %></p>
+   
+   
 <% end %>
