@@ -1,3 +1,5 @@
+
+<% if current_user && current_user.admin %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -27,3 +29,7 @@
 
 <%= link_to 'Edit', edit_sessao_path(@sessao) %> |
 <%= link_to 'Back', sessaos_path %>
+ <% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
+   <%= render 'layouts/footer' %>

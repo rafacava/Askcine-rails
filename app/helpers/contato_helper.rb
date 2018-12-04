@@ -1,2 +1,0 @@
-module ContatoHelper
-end

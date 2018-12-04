@@ -1,3 +1,4 @@
+<% if current_user && current_user.admin %>
 <header>
    <%= render 'layouts/header-adm' %>
 </header>
@@ -15,6 +16,8 @@
 
 </div>
 <br>
-<br>
 
- <%= render 'layouts/footer' %>
+    <% else %>
+   <%= render 'layouts/valida0' %>
+<% end %>
+   <%= render 'layouts/footer' %>

@@ -20,3 +20,10 @@
 <br>
 
   <%= render 'layouts/footer' %>
+
+<% if current_user && current_user.admin %>
+
+   <% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
+   <%= render 'layouts/footer' %>

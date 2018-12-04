@@ -1,16 +1,15 @@
-<div class="carousel carousel-slider center">
+
     
-    <% @postagems.each do |postagem| %> 
+<% @postagems.each do |postagem| %> 
     
-    <div class="carousel-item" href="one!">
-      
-      <div class="col s12">
-    <div class="card horizontal blue-grey lighten-4">
+
+    <div class="col s12">
+    <div class="card horizontal">
       <div class="card-image">
          <img class="activator"  src="<%= postagem.imagem %>" alt="Poster do filme <%= postagem.titulo %>">
       </div>
       <div class="card-stacked">
-        <div class="card-content black-text">
+        <div class="card-content">
           <p class="black-text"><h4><%= postagem.titulo %></h4></p>
           <p class="black-text"><%= postagem.conteudo %></p>
     
@@ -18,14 +17,14 @@
       </div>
     </div>
   </div>
-  </div>
-
+          
+   
    <% end %>
+   
 
-    </div>        
 <script>
-  $('.carousel.carousel-slider').carousel({
-    fullWidth: true,
-    indicators: true
-  });
-</script>
+$(document).ready(function(){
+    $('.icone').html('play_arrow');
+});
+</script>            
+        

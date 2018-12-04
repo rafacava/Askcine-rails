@@ -1,3 +1,4 @@
+<% if current_user && current_user.admin %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -22,3 +23,9 @@
 
 <%= link_to 'Edit', edit_postagem_path(@postagem) %> |
 <%= link_to 'Back', postagems_path %>
+
+
+ <% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
+   <%= render 'layouts/footer' %>

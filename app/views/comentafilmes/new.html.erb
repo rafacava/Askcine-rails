@@ -1,5 +1,9 @@
-<h1>New Comentafilme</h1>
+
+<% if current_user && current_user.admin %>
+<h1>Novo Comentario</h1>
 
 <%= render 'form', comentafilme: @comentafilme %>
 
-<%= link_to 'Back', comentafilmes_path %>
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

@@ -1,3 +1,5 @@
+
+<% if current_user && current_user.admin %>
 <header>
    <%= render 'layouts/header-adm' %>
 </header>
@@ -11,4 +13,7 @@
         <%= link_to 'Voltar', filmes_path %>
  
  </div>
- <%= render 'layouts/footer' %>
+ <% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
+   <%= render 'layouts/footer' %>

@@ -1,3 +1,5 @@
+
+<% if current_user && current_user.admin %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -22,3 +24,10 @@
 
 <%= link_to 'Edit', edit_comentafilme_path(@comentafilme) %> |
 <%= link_to 'Back', comentafilmes_path %>
+
+
+
+
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

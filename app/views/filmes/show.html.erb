@@ -1,3 +1,4 @@
+<% if current_user && current_user.admin %>
 <header>
    <%= render 'layouts/header' %>
 </header>
@@ -50,7 +51,9 @@
  
 <%= link_to 'Voltar', lancamentos_path %>
 </div>
-
+ <% else %>
+   <%= render 'layouts/valida0' %>
+<% end %>
 <footer>
    <%= render 'layouts/footer' %>
 </footer>

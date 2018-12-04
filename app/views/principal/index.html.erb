@@ -61,7 +61,7 @@
               <p>Veja todas as notícias sobre filmes.</p>
             </div>
             <div class="card-action">
-              <a href="<?= base_url(); ?>dicas">Veja nossas notícias</a>
+              <%= link_to "Veja todas as notícias",   postagens_path%>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
 </div>
   <div class="row fundo1 center-align">
    <div class="col s12"><h2>Últimas notícias</h2>
-   
+   <br> <br>
   
          <%= render 'layouts/noti' %>
    </div>

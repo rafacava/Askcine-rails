@@ -1,3 +1,6 @@
+<% if current_user && current_user.admin %>
+
+   <%= render 'layouts/header-adm' %>
 <p id="notice"><%= notice %></p>
 
 <h1>Comentafilmes</h1>
@@ -31,3 +34,7 @@
 <br>
 
 <%= link_to 'New Comentafilme', new_comentafilme_path %>
+
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

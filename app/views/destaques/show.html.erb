@@ -1,3 +1,5 @@
+ 
+<% if current_user && current_user.admin %>
    <%= render 'layouts/header' %>
 <p id="notice"><%= notice %></p>
 
@@ -11,10 +13,9 @@
   <%= @destaque.imagem %>
 </p>
 <%= link_to 'Voltar', destaques_path %> |
-<% if current_user && current_user.admin %>
 <%= link_to 'Editar', edit_destaque_path(@destaque) %>
 
    <% else %>
-   <%= render 'layouts/valida0' %>
+   <%= render 'layouts/valida' %>
 <% end %>
    <%= render 'layouts/footer' %>

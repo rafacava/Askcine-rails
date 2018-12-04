@@ -1,6 +1,14 @@
-<h1>Editing Comentafilme</h1>
+
+<% if current_user && current_user.admin %>
+<h1>Editar Comentar</h1>
 
 <%= render 'form', comentafilme: @comentafilme %>
 
 <%= link_to 'Show', @comentafilme %> |
 <%= link_to 'Back', comentafilmes_path %>
+
+
+
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>

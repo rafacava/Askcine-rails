@@ -141,7 +141,7 @@ h2 {
        * element that contains the map. */
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
-      #map { height: 100% }
+      #map { height: 30%; width: 30%; }
       
       
 // .card img {
@@ -195,4 +195,8 @@ height: 250px;
 
 .fundoc{
 background-image: url('fondu2.jpg');
+}
+
+.fontei {
+    color: black;
 }
