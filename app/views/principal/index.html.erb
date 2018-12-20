@@ -4,10 +4,10 @@
 <br>
       <div class="row">
         <div class="col s12">
-           <div class="carousel carousel-slider 1">
+           <div class="carousel carousel-slider 1 center">
             <% @destaques.each do |destaque| %>
-              <a class="carousel-item" href="#one!"><img src="<%= destaque.imagem %>" class="slido"></a>
-    
+              <a class="carousel-item" href="#one!"><img src="<%= destaque.imagem %>" class="slido"><%= destaque.titulo %></a>
+              
             <% end %>
 
             </div>
