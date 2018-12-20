@@ -1,24 +1,18 @@
 <header>
    <%= render 'layouts/header' %>
 </header>
+<br>
       <div class="row">
         <div class="col s12">
-
-<div class="slider fullscreen" id="aft">
-    <ul class="slides">
-            <% @destaques.each do |destaque| %> 
-                <li>
-                    <img src="<%= destaque.imagem %>"> <!-- random image -->
-                    <div class="caption center-align">
-                        <h3><%= destaque.titulo %></h3>
-                    </div>
-                </li>
-      
+           <div class="carousel carousel-slider 1">
+            <% @destaques.each do |destaque| %>
+              <a class="carousel-item" href="#one!"><img src="<%= destaque.imagem %>" class="slido"></a>
+    
             <% end %>
-    </ul>
-  </div>
-  </div>
-            
+
+            </div>
+          </div>
+        </div>
             
  <!--Card-->
  <div id=primeiro>
@@ -84,6 +78,21 @@
   
          <%= render 'layouts/noti' %>
    </div>
-</div> 
+</div>
+<br><br>
 </div>
    <%= render 'layouts/footer' %>
+   
+   
+   
+<script>
+    $('.carousel.carousel-slider.1').carousel({
+    fullWidth: true
+  });
+  
+autoplay();
+  function autoplay() {
+    $('.carousel.carousel-slider.1').carousel('next');
+    setTimeout(autoplay, 4500);
+}
+</script>

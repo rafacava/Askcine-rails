@@ -180,9 +180,6 @@ height: 250px;
           background-image: url('fundob.jpg');
           background-repeat:repeat-x;
  }
- #primeiro {
-    margin-top: 50rem;
-     }
 .texto-noticia{
     margin:5rem;
     margin-right:10rem;
@@ -196,4 +193,8 @@ background-image: url('fondu2.jpg');
 
 .fontei {
     color: black;
+}
+
+.slido{
+  filter: opacity(75%);
 }
