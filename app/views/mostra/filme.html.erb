@@ -37,23 +37,23 @@
 </div>
           
     <% end %>
-    
+<div class="comentario">    
     <div class="row">
         <h2>Comentarios</h2>
     </div>
     
   <% @comentafilmes.each do |comentafilme| %> 
-<div class="container center-align comentario">    
-    <div class="row titulo">
-        <h3><%= comentafilme.titulo %></h3>
-        <h4>Por:<%= comentafilme.user.username %></h4>
-    </div>
-    <div class="row conteudo">
-        <p><%= comentafilme.comentario %> </p>
-    </div>
+        <div class="container comentario">    
+            <div class="row titulo">
+                <h4><%= comentafilme.titulo %></h4>
+                Por:<b><%= comentafilme.user.username %></b>
+            </div>
+            <div class="row conteudo">
+                <p><%= comentafilme.comentario %> </p>
+            </div>
+        </div>    
+    <% end %>
 </div>    
-<% end %>
-    
 <%= render 'layouts/footer' %>
 
 <script>
