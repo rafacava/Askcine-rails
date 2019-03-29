@@ -4,16 +4,19 @@
     
     <div class="carousel-item" href="one!">
       
-      <div class="col s12">
+      <div class="row">
     <div class="card horizontal blue-grey lighten-4">
+      <div class="col s4">
       <div class="card-image">
          <img class="activator"  src="<%= postagem.imagem %>" alt="Poster do filme <%= postagem.titulo %>">
       </div>
-      <div class="card-stacked">
-        <div class="card-content black-text">
-          <p class="black-text"><h4><%= postagem.titulo %></h4></p>
-          <p class="black-text"><%= postagem.conteudo %></p>
-    
+      </div>
+      <div class="col s5 flow-text">
+        <div class="card-stacked">
+          <div class="card-content black-text">
+            <p class="black-text"><h4><%= postagem.titulo %></h4></p>
+            <p class="black-text"><%= postagem.conteudo %></p>
+          </div>
         </div>
       </div>
     </div>
