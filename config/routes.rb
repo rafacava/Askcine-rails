@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'colaborador/portal'
+  get 'colaborador/novo'
+  get 'colaborador/noticias'
+  get 'colaborador/portal'
+  get 'colaborador/novo'
   get 'lancamento/filmes' => 'lancamento/filmes', as: "lancamentos"
   get 'lancamento/postagens'=> 'lancamento/postagens', as: "postagens"
   resources :comentafilmes
