@@ -1,7 +1,22 @@
 <% if current_user && current_user.colaborador || current_user.admin  %>
 <%= render 'layouts/header' %>
-<h1>Colaborador#portal</h1>
-<p>Find me in app/views/colaborador/portal.html.erb</p>
+<div class="row fundoadm center-align">
+      <div class="col s12">
+        <div> <%= render 'layouts/modal-login' %> </div>
+      </div>
+</div>
+<div class="row fundoadm center-align">
+               <div class="col s12 cemter-align">
+     <h3>Notícias</h3>
+     <br>
+      <%= link_to "Ver Minhas notícias",   postagems_path, :class => 'waves-effect waves-light grey darken-4 btn' %>
+   <%= link_to "Inserir nova notícia",   postagemsnew_path, :class => 'waves-effect waves-light grey darken-4 btn' %> 
+    
+<br>
+<br><br>
+    </div>
+
+</div>
 <%= render 'layouts/footer' %>
 <% else %>
    <%= render 'layouts/valida' %>
