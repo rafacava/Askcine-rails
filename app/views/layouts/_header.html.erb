@@ -28,7 +28,10 @@
       <li><%= link_to current_user.username,   edit_user_registration_path %></li>
       <li><%= link_to "Logout",   destroy_user_session_path, method: :delete %></li>
       <% if current_user.admin %>
-      <li><%= link_to "Página ADM",   administracao_home_path %></li>
+        <li><%= link_to "Página ADM",   administracao_home_path %></li>
+      <% end %>
+      <% if current_user.colaborador %>
+        <li><%= link_to "Portal Colaborador",   colaborador_portal_path %></li>
       <% end %>
   <% else %>
       <li><%= link_to "Registrar",   new_user_registration_path %></li>

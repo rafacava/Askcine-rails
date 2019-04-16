@@ -1,2 +1,8 @@
+<% if current_user && current_user.colaborador || current_user.admin  %>
+<%= render 'layouts/header' %>
 <h1>Colaborador#portal</h1>
 <p>Find me in app/views/colaborador/portal.html.erb</p>
+<%= render 'layouts/footer' %>
+<% else %>
+   <%= render 'layouts/valida' %>
+<% end %>
