@@ -9,6 +9,11 @@ class MostraController < ApplicationController
     @cinemas = Cinema.where("id = ?", params[:id])
    
   end
+  def noticia
+    @postagems = Postagem.where("id = ?", params[:id])
+   
+  end
+  
 end
 
 

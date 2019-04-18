@@ -1,4 +1,5 @@
 class ColaboradorController < ApplicationController
+  include Devise::Controllers::Helpers 
   def portal
   end
 
@@ -6,5 +7,6 @@ class ColaboradorController < ApplicationController
   end
 
   def noticias
+    @postagems = Postagem.where(user:current_user.id)
   end
 end

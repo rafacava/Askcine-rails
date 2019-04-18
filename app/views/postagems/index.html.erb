@@ -25,7 +25,7 @@
         <td><%= postagem.titulo %></td>
         <td><%= postagem.conteudo %></td>
         <td><img src="<%= postagem.imagem %>" alt="Poster de noticia" width="200"></td>
-        <td><%= postagem.user %></td>
+        <td><%= postagem.user.username %></td>
         <td><%= link_to 'Show', postagem %></td>
         <td><%= link_to 'Edit', edit_postagem_path(postagem) %></td>
         <td><%= link_to 'Destroy', postagem, method: :delete, data: { confirm: 'Are you sure?' } %></td>

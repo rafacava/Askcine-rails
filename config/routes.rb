@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :comentafilmes
   get 'mostra/filme'
   get 'mostra/cinema'
+  get 'mostra/noticia'
   get 'buscar/cinemas'
   get 'buscar/filme'
   get 'sessoes/filme'
