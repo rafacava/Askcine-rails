@@ -1,8 +1,14 @@
+<% if current_user && current_user.admin || current_user.colaborador %>
 <% if current_user && current_user.admin %>
 <header>
    <%= render 'layouts/header-adm' %>
 </header>
-
+<% end %>
+<% if current_user && current_user.colaborador %>
+<header>
+   <%= render 'layouts/header' %>
+</header>
+<% end %>
 <div class="container">
 <h1>Inserir Postagem</h1>
 

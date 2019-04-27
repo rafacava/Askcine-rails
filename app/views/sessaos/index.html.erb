@@ -23,8 +23,8 @@
   <tbody>
     <% @sessaos.each do |sessao| %>
       <tr>
-        <td><%= sessao.dia %></td>
-        <td><%= sessao.horario %></td>
+        <td class="data"><%= sessao.dia %></td>
+        <td class="horario"><%= sessao.horario %></td>
         <td><%= sessao.status %></td>
         <td><%= sessao.cinema.nome %></td>
         <td><%= sessao.filme.nome %></td>
@@ -44,6 +44,9 @@
 </div>
 
    <%= render 'layouts/footer' %>
+   <script>
+     
+   </script>
 <% else %>
    <%= render 'layouts/valida' %>
 <% end %>

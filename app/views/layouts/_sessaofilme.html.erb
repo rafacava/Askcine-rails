@@ -13,8 +13,8 @@
         <div class="card-content">
           <p class="black-text"><h4><%= sessao.filme.nome %></h4></p>
           <p class="black-text"><h5>Nome do cinema</h5><%= sessao.cinema.nome %></p>
-          <p class="black-text"><h5>Dia da sessão</h5><%= sessao.dia %></p>
-          <p class="black-text"><h5>Horário da sessão</h5><%= sessao.horario %></p>
+          <p class="black-text dia"><h5>Dia da sessão</h5><%= sessao.dia.to_time.strftime("%m/%d/%Y") %></p>
+          <p class="black-text hora"><h5>Horário da sessão</h5><%= sessao.horario.strftime("%l:%M %p") %></p>
         </div>
       </div>
     </div>
