@@ -14,6 +14,12 @@ class MostraController < ApplicationController
    
   end
   
+  def sessao
+    @sessaos = Sessao.where("id = ?", params[:id])
+   
+  end
+  
+  
 end
 
 

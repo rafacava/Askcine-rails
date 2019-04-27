@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'mostra/filme'
   get 'mostra/cinema'
   get 'mostra/noticia'
+  get 'mostra/sessao'
   get 'buscar/cinemas'
   get 'buscar/filme'
   get 'sessoes/filme'

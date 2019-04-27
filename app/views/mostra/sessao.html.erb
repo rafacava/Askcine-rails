@@ -1,5 +1,5 @@
-
-    <% @sessaos.each do |sessao| %> 
+<%= render 'layouts/header' %>
+  <% @sessaos.each do |sessao| %> 
  
     
     
@@ -45,3 +45,11 @@ $(document).ready(function(){
     <% end %>
 
         
+
+<%= render 'layouts/footer' %>
+
+<script>
+$(document).ready(function(){
+    $('.icone').html('play_arrow');
+});
+</script>            
