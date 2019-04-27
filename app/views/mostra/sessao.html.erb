@@ -37,7 +37,7 @@ $(document).ready(function(){
           body: '<%= j sessao.filme.nome %>'
       });
       notification.onclick = function() {
-          window.open("http://stackoverflow.com");
+          window.open("<%= mostra_filme_url(:id => sessao.filme) %>");
       }
 });
 </script>    
