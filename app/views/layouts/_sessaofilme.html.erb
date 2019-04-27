@@ -22,12 +22,33 @@
           
    
    
-
-          
-    <% end %>
-
 <script>
 $(document).ready(function(){
     $('.icone').html('play_arrow');
+    
 });
-</script>            
+
+   $( document ).ready(function() {
+   Notification.requestPermission(/* opcional: callback */);
+      
+      var notification = new Notification("Deseja lembrar que essa sessao irá iniciar em: <%= j sessao.horario.strftime("%l:%M %p") %>?", {
+          icon: '<%= j sessao.filme.imagem %>',
+          body: '<%= j sessao.filme.nome %>'
+      });
+      notification.onclick = function() {
+          window.open("http://stackoverflow.com");
+      }
+});
+ $( document ).ready(function() {
+if (window.webkitNotifications) {
+  alert('Seu browser possui suporte ao Notifications');
+}
+else {
+  alert('Seu browser não possui suporte ao Notifications');
+}
+});
+</script>    
+          
+    <% end %>
+
+        
