@@ -1,4 +1,5 @@
 class BuscarController < ApplicationController
+require 'will_paginate/array'  
   def cinemas
     @cinemas = Cinema.all
     if params[:search]
@@ -10,11 +11,19 @@ class BuscarController < ApplicationController
     
 
   def filme
-    @filmes = Filme.all
+      @filmes = []
+      Filme.all.each do |filme|
+        @filmes.push(filme)
+      end
+     @filmes = Filme.paginate(page: params[:page], :per_page => 3)
     if params[:search]
       @filmes = Filme.search(params[:search])
     else
-      @filmes = Filme.all
+      @filmes = []
+      Filme.all.each do |filme|
+        @filmes.push(filme)
+      end
+     @filmes = Filme.paginate(page: params[:page], :per_page => 3)
     end
   end
 end
