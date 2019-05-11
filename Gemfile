@@ -10,7 +10,7 @@ gem 'jquery-rails'
 
 gem 'materialize-sass'
 gem 'material_icons'
-
+gem 'will_paginate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 

@@ -1,0 +1,35 @@
+
+    <% @filmes.each do |filme| %> 
+ 
+    
+  <div class="col s12 m4 center-align container">
+  <div class="card medium ">
+    
+    
+    <div class="card-image waves-effect waves-block waves-light responsive-img">
+      <img class="activator"  src="<%= filme.imagem %>" alt="Poster do filme <%= filme.nome %>">>
+    </div>
+    
+    <div class="card-content ">
+      <span class="card-title activator grey-text text-darken-4"><%= filme.nome %><i class="material-icons right">more_vert</i></span>
+      <p><%= link_to 'Ver Filme', mostra_filme_path(:id => filme) %></p>
+      <p><%= link_to 'Ver Sessões do filme', sessoes_filme_path(:id => filme) %></p>
+      
+     <!--   <p><%= link_to 'Show', sessaos_path %></p> -->
+  
+  
+    </div>
+    <div class="card-reveal ">
+      <span class="card-title grey-text text-darken-4"><%= filme.nome %><i class="material-icons right">close</i></span>
+      <p class="black-text"><%= filme.sinopse %></p>
+    </div>
+  </div>
+  </div>
+          
+    <% end %>
+
+<script>
+$(document).ready(function(){
+    $('.icone').html('play_arrow');
+});
+</script>            
