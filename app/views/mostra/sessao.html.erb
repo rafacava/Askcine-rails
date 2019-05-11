@@ -1,13 +1,9 @@
 <%= render 'layouts/header' %>
   <% @sessaos.each do |sessao| %> 
- 
-    
-    
-   
     <div class="col s12 m7">
     <div class="card horizontal">
       <div class="card-image">
-         <img class="activator"  src="<%= sessao.filme.imagem %>" alt="Poster do filme <%= sessao.filme.nome %>">
+         <img class="activator" src="<%= sessao.filme.imagem %>" alt="Poster do filme <%= sessao.filme.nome %>">
       </div>
       <div class="card-stacked">
         <div class="card-content">
@@ -32,7 +28,7 @@ $(document).ready(function(){
    $( "#b" ).click(function() {
    Notification.requestPermission(/* opcional: callback */);
       
-      var notification = new Notification("Deseja lembrar que essa sessao irá iniciar em: <%= j sessao.horario.strftime("%l:%M %p") %>?", {
+      var notification = new Notification("Deseja lembrar que essa sessao irá iniciar em: <%= j sessao.horario.strftime("%l:%M") %>?", {
           icon: '<%= j sessao.filme.imagem %>',
           body: '<%= j sessao.filme.nome %>'
       });
