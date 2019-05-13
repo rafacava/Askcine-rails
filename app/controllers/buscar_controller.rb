@@ -17,7 +17,7 @@ require 'will_paginate/array'
       end
      @filmes = Filme.paginate(page: params[:page], :per_page => 3)
     if params[:search]
-      @filmes = Filme.search(params[:search])
+      @filmes = Filme.search(params[:search]).paginate(:page => params[:page], :per_page => 2)
     else
       @filmes = []
       Filme.all.each do |filme|
