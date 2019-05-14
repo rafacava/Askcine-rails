@@ -8,8 +8,13 @@
         <li><%= link_to "Buscar Cinemas",   buscar_cinemas_path, :class => 'waves-effect waves-light grey darken-4 btn' %></li>
        <li><%= link_to "Em cartaz",   lancamentos_path, :class => 'waves-effect waves-light grey darken-4 btn' %></li>
         <li> 
-             <i class="material-icons medium dropdown-trigger" id="log" href="#!" data-target="dropdown1">person</i>
-        </li>
+         <% if user_signed_in? %>
+         <i class="material-icons medium dropdown-trigger blue-text" id="log" href="#!" data-target="dropdown1">person</i>
+         <% else %>
+         <i class="material-icons medium dropdown-trigger red-text" id="log" href="#!" data-target="dropdown1">person</i>
+       
+         <% end %>
+              </li>
       </ul>
     </div
   </div>

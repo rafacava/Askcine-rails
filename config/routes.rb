@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categoria
   get 'colaborador/portal'
   get 'colaborador/novo'
   get 'colaborador/noticias'
