@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :categoria
+  resources :commentfilms do
+    post 'commentfilms', to: 'commentfilms#create'
+  end
   get 'colaborador/portal'
   get 'colaborador/novo'
   get 'colaborador/noticias'
@@ -24,7 +26,7 @@ Rails.application.routes.draw do
   resources :sessaos
   resources :cinemas
   resources :cidades
-    resources :filmes
+  resources :filmes
     
   get 'administracao/home'
   devise_for :users

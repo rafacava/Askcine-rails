@@ -26,7 +26,6 @@ class ComentafilmesController < ApplicationController
   def create
     @comentafilme = Comentafilme.new(comentafilme_params)
     @comentafilme.user = current_user
-
     respond_to do |format|
       if @comentafilme.save
         format.html { redirect_to @comentafilme, notice: 'Comentafilme was successfully created.' }

@@ -1,11 +1,9 @@
 
 <% if current_user %>
-<h1>Novo Comentario</h1>
+<h3 class="center-align">Novo Comentario</h3>
 
 <%= render 'form', comentafilme: @comentafilme %>
 
 <% else %>
    <%= render 'layouts/valida' %>
 <% end %>
-<p><%= link_to 'Volta', mostra_filme_path(:id => @comentafilme.filme) %></p>
-   <%= render 'layouts/footer' %>

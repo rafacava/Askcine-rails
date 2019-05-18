@@ -6,6 +6,7 @@ class User < ApplicationRecord
          
          
   
+  has_many :commentfilms
   def username
     return self.email.split('@')[0].capitalize
   end

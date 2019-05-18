@@ -27,7 +27,7 @@
               <li>
                     <p><%= link_to 'Ver Sessões do filme', sessoes_filme_path(:id => filme) %></p>
                       
-                    <p><%= link_to 'Comentar filme', new_comentafilme_path %></p>
+                    <p><%= link_to 'Comentar filme', new_comentafilme_path(:id => filme)  %></p>
               </li>
           </ul>
      </div>
@@ -36,13 +36,26 @@
   </div>
 </div>
           
-    <% end %>
+    
 <div class="comentario">    
     <div class="row">
         <h2>Comentarios</h2>
     </div>
-    
-  <% @comentafilmes.each do |comentafilme| %> 
+    <br>
+    <div class="row center-align"><a class="waves-effect waves-light btn-large black blue-text modal-trigger" href="#modal1">Fazer um Comentario</a></div>
+<div id="modal1" class="modal">
+    <div class="modal-content">
+      <iframe src="<%= new_comentafilme_path(:id => filme) %>"width="700px" height="350px">
+             <p>Your browser does not support iframes.</p>
+      </iframe>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-light btn-large red white-text">Fechar</a>
+    </div>
+ </div>
+<% end %>
+
+    <% @comentafilmes.each do |comentafilme| %> 
         <div class="container comentario">    
             <div class="row titulo">
                 <h4><%= comentafilme.titulo %></h4>
@@ -53,11 +66,13 @@
             </div>
         </div>    
     <% end %>
-</div>    
+</div>
+
 <%= render 'layouts/footer' %>
 
 <script>
 $(document).ready(function(){
     $('.icone').html('play_arrow');
+    $('.modal').modal();
 });
 </script>            

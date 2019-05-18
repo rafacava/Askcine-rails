@@ -1,5 +1,10 @@
 @import "materialize";
 @import "material_icons";
+/* ...
+*= require_self
+*= require flexslider
+*= require_tree .
+*/
 
 body {
     background-color: white;

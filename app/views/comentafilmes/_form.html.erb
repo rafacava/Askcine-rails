@@ -11,10 +11,10 @@
     </div>
   <% end %>
 
-
-<div class="field">
+<div class="center-align">
+<div class="field hide">
     <%= form.label :filme_id %>
-    <%= collection_select(:comentafilme, :filme_id, Filme.all.order(:nome), :id, :nome) %>
+    <%= form.text_field :filme_id, required: true, value:params[:id] %>
 </div>
   
   <div class="field">
@@ -26,12 +26,14 @@
     <%= form.label :comentario %>
     <%= form.text_area :comentario %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+<br><br>
+  <div class = 'waves-effect waves-light btn-large' >
+   <%= form.submit 'Publicar Comentario'%>
+  </div>
   </div>
 <% end %>
 <script>
+
   
     $(document).ready(function(){
     $('select').formSelect();
