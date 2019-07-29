@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_021352) do
-
-  create_table "categoria", force: :cascade do |t|
-    t.string "nome"
-    t.string "descricao"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 2019_04_15_223902) do
 
   create_table "cidades", force: :cascade do |t|
     t.string "nome"
