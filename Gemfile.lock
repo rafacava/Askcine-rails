@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/wazery/ratyrate.git
+  revision: 718e4f9e340e2c7fbf76e190f3bb298ce291b711
+  specs:
+    ratyrate (1.2.2.alpha)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -99,6 +105,9 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    jquery-turbolinks (2.1.0)
+      railties (>= 3.1.0)
+      turbolinks
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -230,12 +239,14 @@ DEPENDENCIES
   flex-slider-rails
   jbuilder (~> 2.5)
   jquery-rails
+  jquery-turbolinks
   listen (>= 3.0.5, < 3.2)
   material_icons
   materialize-sass
   pg (= 0.20.0)
   puma (~> 3.11)
   rails (~> 5.2.1)
+  ratyrate!
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
@@ -251,4 +262,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.17.1
+   2.0.2

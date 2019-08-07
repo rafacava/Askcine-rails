@@ -25,6 +25,10 @@
                       <%= filme.sinopse %>
               </li>
               <li>
+                <strong>Nota do filme</strong>
+                <%= rating_for filme, "nome", disable_after_rate: true, imdb_avg: true%>
+              </li>
+              <li>
                     <p><%= link_to 'Ver Sessões do filme', sessoes_filme_path(:id => filme) %></p>
                       
                     <p><%= link_to 'Comentar filme', new_comentafilme_path(:id => filme)  %></p>
@@ -33,28 +37,39 @@
      </div>
   <div class="col s6"><img class="center-align"  src="<%= filme.imagem %>" alt="Poster do filme <%= filme.nome %>">
   </div>
+
+<% if current_user %>
+  <div class="nota">
+    <div class="row">
+      <h3>De uma nota ao filme</h3>
+        Avalie o filme : <%= rating_for filme, 'nome', star: 5, cancel_hint: 'Cancele a sua nota!', disable_after_rate: false, cancel: true, enable_half: false %>
+    </div>
+  </div>
+<% end %>
   </div>
 </div>
           
     
-<div class="comentario">    
+<div class="comentario align-center">    
     <div class="row">
         <h2>Comentarios</h2>
     </div>
     <br>
-    <div class="row center-align"><a class="waves-effect waves-light btn-large black blue-text modal-trigger" href="#modal1">Fazer um Comentario</a></div>
-<div id="modal1" class="modal">
-    <div class="modal-content">
-      <iframe src="<%= new_comentafilme_path(:id => filme) %>"width="700px" height="350px">
-             <p>Your browser does not support iframes.</p>
-      </iframe>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-light btn-large red white-text">Fechar</a>
-    </div>
- </div>
-<% end %>
+    <% if current_user %>
 
+        <div class="row center-align"><a class="waves-effect waves-light btn-large black blue-text modal-trigger" href="#modal1">Fazer um Comentario</a></div>
+        <div id="modal1" class="modal">
+        <div class="modal-content">
+          <iframe src="<%= new_comentafilme_path(:id => filme) %>"width="700px" height="350px">
+                 <p>Your browser does not support iframes.</p>
+          </iframe>
+        </div>
+        <div class="modal-footer">
+          <a href="#!" class="modal-close waves-effect waves-light btn-large red white-text">Fechar</a>
+        </div>
+        </div>
+    <% end %>
+<% end %>
     <% @comentafilmes.each do |comentafilme| %> 
         <div class="container comentario">    
             <div class="row titulo">

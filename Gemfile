@@ -7,7 +7,8 @@ gem 'devise'
 
 gem 'bcrypt'
 gem 'jquery-rails'
-
+gem 'ratyrate', :github => 'wazery/ratyrate'
+gem 'jquery-turbolinks'
 gem 'materialize-sass'
 gem 'material_icons'
 gem 'will_paginate', '~> 3.1.0'
