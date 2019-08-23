@@ -10,15 +10,18 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
+//= require jquery
+//= require jquery.turbolinks
+//= require jquery_ujs
+//
 //= require rails-ujs
 //= require activestorage
-// Inclua nas versões quando rails >= 5.1
-//= require jquery
-//= require jquery_ujs
-// Sempre inclua
 //= require materialize-sprockets
 //= require jquery.raty
 //= require ratyrate
+//
 //= require turbolinks
 //= require_tree .
 

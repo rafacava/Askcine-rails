@@ -47,7 +47,6 @@ ActiveRecord::Schema.define(version: 2019_08_06_231012) do
     t.text "comentario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "nota"
     t.index ["filme_id"], name: "index_comentafilmes_on_filme_id"
     t.index ["user_id"], name: "index_comentafilmes_on_user_id"
   end
