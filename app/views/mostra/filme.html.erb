@@ -26,29 +26,44 @@
               </li>
               <li>
                 <strong>Nota do filme</strong>
-                <%= rating_for filme, "nome", disable_after_rate: true, imdb_avg: true%>
+                <div class="readonly-star">
+                <%= rating_for filme, "nome", disable_after_rate: true %>
+                </div>
+                <% if current_user %>
+  <div class="nota">
+    <div class="row">
+        <a class="waves-effect waves-light black btn modal-trigger" href="#modal2">Dê uma nota ao filme!</a>
+
+        <!-- Modal Structure -->
+        <div id="modal2" class="modal">
+          <div class="modal-content align-center">
+            <h4>      Avalie o filme : </h4>
+            <%= rating_for filme, 'nome', star: 5, cancel_hint: 'Cancele a sua nota!', disable_after_rate: false, cancel: true, enable_half: false %>
+    
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green black btn" onClick="window.location.reload();">Fechar</a>
+          </div>
+        </div>    
+    </div>
+  </div>
+<% end %>
+
               </li>
               <li>
                     <p><%= link_to 'Ver Sessões do filme', sessoes_filme_path(:id => filme) %></p>
                       
-                    <p><%= link_to 'Comentar filme', new_comentafilme_path(:id => filme)  %></p>
               </li>
           </ul>
      </div>
   <div class="col s6"><img class="center-align"  src="<%= filme.imagem %>" alt="Poster do filme <%= filme.nome %>">
   </div>
 
-<% if current_user %>
-  <div class="nota">
-    <div class="row">
-      <h3>De uma nota ao filme</h3>
-        Avalie o filme : <%= rating_for filme, 'nome', star: 5, cancel_hint: 'Cancele a sua nota!', disable_after_rate: false, cancel: true, enable_half: false %>
-    </div>
-  </div>
-<% end %>
+
   </div>
 </div>
           
+    
     
 <div class="comentario align-center">    
     <div class="row">
@@ -90,4 +105,10 @@ $(document).ready(function(){
     $('.icone').html('play_arrow');
     $('.modal').modal();
 });
+
+$(document).ready(function(){
+    $(".readonly-star .star").each(function() {
+      $(this).raty('set', { readOnly: true });
+    });
+  });
 </script>            
