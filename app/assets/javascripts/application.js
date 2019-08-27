@@ -22,7 +22,6 @@
 //= require jquery.raty
 //= require ratyrate
 //
-//= require turbolinks
 //= require_tree .
 
 
