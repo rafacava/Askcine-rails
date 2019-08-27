@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'mostra/sessao'
   get 'buscar/cinemas'
   get 'buscar/filme'
+  get 'buscar/generofilme'
   get 'sessoes/filme'
   get 'sessoes/cinema'
   get 'contato/index'
@@ -36,6 +37,7 @@ Rails.application.routes.draw do
   
   get 'busca/filmes' => 'busca/filmes', as: "buscafilmes"
   get 'busca/cinema' => 'busca/cinema', as: "buscacinema"
+  get 'busca/generofilme' => 'busca/generofilme', as: "buscagenero"
   
   get 'filmes/new' => 'filmes/new', as: "filmesnew"
   get 'cinemas/new' => 'cinemas/new', as: "cinemasnew"

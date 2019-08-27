@@ -19,7 +19,7 @@
                       <% @generos.each do |genero| %>
   
                             <p><%= genero.nome %></p>
-                            <p><%= link_to 'Ver gênero', buscar_generofilme_path(:id => genero) %></p>
+                            <p><%= link_to 'Ver Cinema', genero_path(:id => genero) %></p>
       
                       <% end %>
                         
