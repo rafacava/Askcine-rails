@@ -29,12 +29,9 @@
 
   $(document).ready(function(){
     $('.slider').slider();
+    $('.modal').modal();
+    $('select').formSelect();
+  
   });
 
-         $(document).ready(function(){
-        $('.modal').modal();
-      });
-      
-      
-
-
+  

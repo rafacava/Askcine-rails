@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_06_231012) do
+ActiveRecord::Schema.define(version: 2019_08_27_121029) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer "rater_id"
@@ -66,6 +66,14 @@ ActiveRecord::Schema.define(version: 2019_08_06_231012) do
     t.string "categoria"
     t.string "sinopse"
     t.string "imagem"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "genero_id"
+    t.index ["genero_id"], name: "index_filmes_on_genero_id"
+  end
+
+  create_table "generos", force: :cascade do |t|
+    t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
