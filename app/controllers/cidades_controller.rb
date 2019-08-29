@@ -69,6 +69,6 @@ class CidadesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cidade_params
-      params.require(:cidade).permit(:nome)
+      params.require(:cidade).permit(:nome,:latitude,:longitude)
     end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_27_121029) do
+ActiveRecord::Schema.define(version: 2019_08_29_133416) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer "rater_id"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2019_08_27_121029) do
     t.string "nome"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "cinemas", force: :cascade do |t|
@@ -32,11 +34,11 @@ ActiveRecord::Schema.define(version: 2019_08_27_121029) do
     t.string "endereco"
     t.string "imagem"
     t.string "fachada"
-    t.string "lat"
-    t.string "long"
     t.integer "cidade_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["cidade_id"], name: "index_cinemas_on_cidade_id"
   end
 

@@ -1,102 +1,52 @@
 <%= render 'layouts/header' %>
-   <% @cinemas.each do |cinema| %>
-<div class="container align-center">  
-  <div class="row">
-   <div class="col s12 black-text"><h2><%= cinema.nome %></h2></div>   
-  </div>
-  
-  <div class="row">
-      <div class="col s6">
-          <ul>
-              <li>
-                      <strong>Cinema:</strong>
-                      <%= cinema.nome %>
-              </li>
-              <li>
-                      <strong>Endereço:</strong>
-                      <%= cinema.endereco %>
-              </li>
-              <li>
-                      <strong>Imagem:</strong>
-                <img class="center-align"  src="<%= cinema.imagem %>" alt="Imagem do cinema <%= cinema.nome %>">
-              </li>
-              <li>
-                      <strong>Fachada:</strong>
-                     <img class="center-align"  src="<%= cinema.fachada %>" alt="Fachada do cinema <%= cinema.nome %>">
-                      
-              </li>
-            <li>
-                      <strong>Latitude:</strong>
-                      <%= cinema.lat %>
-              </li>
-            <li>
-                      <strong>Longitude:</strong>
-                      <%= cinema.long %>
-              </li>
-              <li>
-                    <p><%= link_to 'Ver Sessões nesse cinema', sessoes_cinema_path(:id => cinema) %></p>
-                      
-              </li>
-          </ul>
-     </div>
-     <div class="col s6"></div>
-  </div>
-</div>
+   
+<p>
+  <strong>Nome:</strong>
+  <%= @cinema.nome %>
+</p>
 
-<div id="map" data-latitude="<%= cinema.lat %>" data-longitude="<%= cinema.long %>">
-  <!-- The Map gets drawn here! -->
-</div> 
-    <script>
-      // Note: This example requires that you consent to location sharing when
-      // prompted by your browser. If you see the error "The Geolocation service
-      // failed.", it means you probably did not give permission for the browser to
-      // locate you.
-      function initMap() {
-      var map, infoWindow;
-      var myLatlng = new google.maps.LatLng(<%= j cinema.lat %>, <%= j cinema.long %>);
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatlng,
-          zoom: 13
-        });
-      var marker = new google.maps.Marker({
-          position: myLatlng,
-          map: map,
-          title: '<%= j cinema.nome %>'
-        });
-        
-        infoWindow = new google.maps.InfoWindow;
+<p>
+  <strong>Endereco:</strong>
+  <%= @cinema.endereco %>
+</p>
 
-        // Try HTML5 geolocation.
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-            };
+<p>
+  <strong>Imagem:</strong>
+  <%= @cinema.imagem %>
+</p>
 
-            infoWindow.setPosition(pos);
-            infoWindow.setContent('Sua localização');
-            infoWindow.open(map);
-            map.setCenter(pos);
-          }, function() {
-            handleLocationError(true, infoWindow, map.getCenter());
-          });
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-      }
+<p>
+  <strong>Fachada:</strong>
+  <%= @cinema.fachada %>
+</p>
 
-      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ?
-                              'Error: The Geolocation service failed.' :
-                              'Error: Your browser doesn\'t support geolocation.');
-        infoWindow.open(map);
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYHyky7nsgHEKTFx7gmuFaR9kbtgtVgWI&callback=initMap"
-    async defer></script>
+<p>
+  <strong>latitude:</strong>
+  <%= @cinema.latitude %>
+</p>
 
-          
-    <% end %>
+<p>
+  <strong>longitude:</strong>
+  <span id='longitudeo'><%= @cinema.longitude %></span>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @cinema.cidade.nome %>
+</p>
+<br>
+
+<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@cinema.latitude},#{@cinema.longitude}&key=AIzaSyBUjukIceXnw7Qc5ydYkRHhc8xNgFwVbpE", alt: "Map" %>
+<br>
+
+<h3>Cinemas Próximos</h3>
+<% for cinema in @cinema.nearbys(10) %>
+  <li><%= link_to cinema.nome, cinema %> (<%= (cinema.distance.round(2) %> km)</li>
+<% end %>
+
+
+<br><br>
+
+   <%= render 'layouts/footer' %>
+
+
