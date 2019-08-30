@@ -21,6 +21,7 @@
 //= require materialize-sprockets
 //= require jquery.raty
 //= require ratyrate
+//= require trix
 //
 //= require_tree .
 

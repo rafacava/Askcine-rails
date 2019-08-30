@@ -6,7 +6,8 @@ class Cinema < ApplicationRecord
     end
 
 geocoded_by :endereco
-after_validation :geocode
+after_validation :geocode, if: ->(obj){ obj.endereco.present? and obj.endereco_changed? }
+
 
 belongs_to :cidade
 

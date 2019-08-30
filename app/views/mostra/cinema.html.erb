@@ -41,7 +41,7 @@
 
 <h3>Cinemas Próximos</h3>
 <% for cinema in @cinema.nearbys(10) %>
-  <li><%= link_to cinema.nome, cinema %> (<%= (cinema.distance.round(2) * 1.60934).round(2) %> km)</li>
+  <li><%= link_to cinema.nome, cinema %> (<%= (cinema.distance.round(2) * 1.60).round(2) %> km)</li>
 <% end %>
 
 
