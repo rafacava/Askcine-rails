@@ -1,6 +1,15 @@
-<header>
+<head>
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "a2891ccf-e802-436c-b9b8-79df009afcc1",
+    });
+  });
+</script>
+</head>
    <%= render 'layouts/header' %>
-</header>
 <br>
       <div class="row">
         <div class="col s12">
