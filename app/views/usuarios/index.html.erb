@@ -1,0 +1,16 @@
+ <h1>Usuarios#index</h1>
+
+<table class="highlight">
+  <thead>
+    <tr>
+      <th>email</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td class="data"><%= user.email %></td></tr>
+    <% end %>
+  </tbody>
+</table>

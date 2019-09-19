@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'usuarios/index'
+  get 'usuarios/edit'
+  get 'usuarios/avatar'
   resources :generos
   post '/rate' => 'rater#create', :as => 'rate'
   resources :commentfilms do

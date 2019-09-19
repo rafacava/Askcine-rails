@@ -15,6 +15,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'flex-slider-rails'
 gem 'geocoder'
 gem 'trix-rails', require: 'trix'
+gem 'paperclip', '~> 4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
