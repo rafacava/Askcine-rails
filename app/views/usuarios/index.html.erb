@@ -4,13 +4,17 @@
   <thead>
     <tr>
       <th>email</th>
+      <th>Admin</th>
+      <th>Contribuidor</th>
     </tr>
   </thead>
 
   <tbody>
     <% @users.each do |user| %>
-      <tr>
-        <td class="data"><%= user.email %></td></tr>
+      <tr><td class="data"><%= user.email %></td>
+      <td class="data"><%= user.admin %></td>
+      <td class="data"><%= user.colaborador %></td>
+     </tr>
     <% end %>
   </tbody>
 </table>

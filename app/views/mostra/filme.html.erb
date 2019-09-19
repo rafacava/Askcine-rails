@@ -90,6 +90,7 @@
             <div class="row titulo">
                 <h4><%= comentafilme.titulo %></h4>
                 Por:<b><%= comentafilme.user.username %></b>
+                <%= image_tag comentafilme.user.avatar.url(:thumb) %>
             </div>
             <div class="row conteudo">
                 <p><%= comentafilme.comentario %> </p>
