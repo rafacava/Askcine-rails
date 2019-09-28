@@ -11,6 +11,6 @@ class User < ApplicationRecord
     return self.email.split('@')[0].capitalize
   end
   
-  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/Paul-18-512.png"
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/oie_2015547LxTJrAUo (1).png"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 end

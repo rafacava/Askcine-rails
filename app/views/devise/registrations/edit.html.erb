@@ -1,5 +1,7 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<%= render 'layouts/header' %>
 
+<h2>Editar Usuario</h2>
+<div class="container center-align">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -13,11 +15,11 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password %> <i>(deixe em branco se não quiser alterá-lo)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em><%= @minimum_password_length %> caracteres mínimos</em>
     <% end %>
   </div>
 
@@ -27,19 +29,31 @@
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password %> <i>(precisamos da sua senha atual para confirmar suas alterações)</i><br />
     <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
   
   
+  
+  <div class="image-upload">
+   <label for="file-input">
+     <a class="waves-effect waves-light btn">Upload da imagem do perfil</a>
+   </label>
 
+   <%= f.file_field :avatar, id:"file-input" %>
+
+</div>
+<br><br>
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "Alterar Cadastro", :class => "waves-effect waves-light white btn" %>
   </div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<h3>Cancelar meu cadastro</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p>Não está feliz? <%= button_to "Cancelar meu cadastro", registration_path(resource_name), data: { confirm: "Tem certeza ?" }, method: :delete, :class => "waves-effect waves-light white btn" %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Voltar", :back %>
+<br><br>
+</div>
+<%= render 'layouts/footer' %>

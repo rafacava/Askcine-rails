@@ -214,3 +214,17 @@ background-image: url('fondu2.jpg');
     height:200px;
     
 }
+.perfil{
+    width:70px;
+    height:70px;
+    border: 1px;
+    border-radius: 50%;
+}
+
+.image-upload > input
+{
+   display: none;
+}
+.image-upload > label{
+  cursor:pointer;
+}
