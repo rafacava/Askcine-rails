@@ -26,10 +26,15 @@
     <%= form.label :diretor %>
     <%= form.text_field :diretor %>
   </div>
-
+  
   <div class="field">
-    <%= form.label :categoria %>
-    <%= form.text_field :categoria %>
+    <%= form.label :atores %>
+    <%= form.text_field :atores %>
+  </div>
+  
+  <div class="field">
+    <%= form.label :trailer %>
+    <%= form.text_field :trailer %>
   </div>
   
   <div class="field">
@@ -47,7 +52,9 @@
     <%= form.label :imagem %>
     <%= form.text_field :imagem %>
   </div>
+<div class="field">
 
+</div>
   <div class="actions waves-effect waves-light black btn">
     <i class="material-icons left">check</i>
     <%= form.submit 'Confirmar Cadastro', :class => 'white-text' %>

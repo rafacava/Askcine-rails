@@ -1,6 +1,18 @@
 <%= render 'layouts/header' %>
    
-<p>
+
+<br>
+<br>
+<br>
+
+ <div class="container">
+   <div class="row">
+     <div class="col s6">
+        <%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@cinema.latitude},#{@cinema.longitude}&key=AIzaSyBUjukIceXnw7Qc5ydYkRHhc8xNgFwVbpE", alt: "Map" %>
+     </div>
+      <div class="col s6">
+        
+        <p>
   <strong>Nome:</strong>
   <%= @cinema.nome %>
 </p>
@@ -11,41 +23,46 @@
 </p>
 
 <p>
-  <strong>Imagem:</strong>
-  <%= @cinema.imagem %>
+  <strong>Logo:</strong>
+  <img class="materialboxed"  width="250" src="<%= @cinema.imagem %>">
 </p>
 
 <p>
   <strong>Fachada:</strong>
-  <%= @cinema.fachada %>
+   <img class="materialboxed"  width="250" src="<%= @cinema.fachada %>">
 </p>
 
-<p>
-  <strong>latitude:</strong>
-  <%= @cinema.latitude %>
-</p>
 
-<p>
-  <strong>longitude:</strong>
-  <span id='longitudeo'><%= @cinema.longitude %></span>
-</p>
 
 <p>
   <strong>Cidade:</strong>
   <%= @cinema.cidade.nome %>
 </p>
-<br>
-
-<%= image_tag "https://maps.googleapis.com/maps/api/staticmap?zoom=17&size=400x300&markers=size:small%7Ccolor:red%7C#{@cinema.latitude},#{@cinema.longitude}&key=AIzaSyBUjukIceXnw7Qc5ydYkRHhc8xNgFwVbpE", alt: "Map" %>
-<br>
-
+<p>
+    Ver Sessões do Cinema
+    <%= link_to @cinema.nome,  mostrarc_cinemark_path %> 
+</p>
+        
+      </div>
+ 
+</div>
 <h3>Cinemas Próximos</h3>
 <% for cinema in @cinema.nearbys(10) %>
   <li><%= link_to cinema.nome,  mostra_cinema_path(:id => cinema) %> (<%= (cinema.distance.round(2) * 1.60).round(2) %> km)</li>
 <% end %>
+      </div>
+
+<br>
+
+
 
 
 <br><br>
+<script>
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+</script>
 
    <%= render 'layouts/footer' %>
 

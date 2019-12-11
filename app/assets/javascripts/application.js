@@ -22,6 +22,7 @@
 //= require jquery.raty
 //= require ratyrate
 //= require trix
+//= require social-share-button
 //
 //= require_tree .
 

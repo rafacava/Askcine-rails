@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'mostrarc/cinemark'
   get 'usuarios/index'
   get 'usuarios/edit'
   get 'usuarios/avatar'

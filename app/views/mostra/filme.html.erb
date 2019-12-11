@@ -25,10 +25,22 @@
                       <%= filme.sinopse %>
               </li>
               <li>
+                <h5>Compartilhar Filme</h5>
+              <%= social_share_button_tag('Share to Facebook', :url =>  mostra_filme_path(:id => filme), desc: filme.nome) %>
+              </li>
+              <br>
+              <li>
+                  <div class="video-container">
+                      <iframe width="853" height="480" src="<%= filme.trailer %>" frameborder="0" allowfullscreen></iframe>
+                  </div>
+              </li>
+              <li>
                 <strong>Nota do filme</strong>
                 <div class="readonly-star">
                 <%= rating_for filme, "nome", disable_after_rate: true %>
+                
                 </div>
+                
                 <% if current_user %>
   <div class="nota">
     <div class="row">
@@ -97,7 +109,8 @@
             </div>
         </div>    
     <% end %>
-</div>
+</div> 
+
 
 <%= render 'layouts/footer' %>
 
